@@ -35,8 +35,8 @@
           x: x * POINT_SPACING,
           y: y * POINT_SPACING,
           angle: Math.random() * Math.PI * 2,
-          speed: 0.15 + Math.random() * 0.25,
-          radius: 6 + Math.random() * 10
+          speed: (reduceMotion ? 0.05 : 0.15) + Math.random() * (reduceMotion ? 0.08 : 0.3),
+          radius: (reduceMotion ? 4 : 10) + Math.random() * (reduceMotion ? 5 : 14)
         });
       }
     }
@@ -53,8 +53,9 @@
   });
 
   var t = 0;
+  var TIME_STEP = reduceMotion ? 0.0025 : 0.008;
   function tick() {
-    t += 0.006;
+    t += TIME_STEP;
     ctx.clearRect(0, 0, width, height);
 
     for (var i = 0; i < points.length; i++) {
@@ -70,7 +71,7 @@
         var dx = p1.x - p2.x, dy = p1.y - p2.y;
         var dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < LINK_DIST) {
-          var opacity = (1 - dist / LINK_DIST) * 0.16;
+          var opacity = (1 - dist / LINK_DIST) * 0.22;
           ctx.strokeStyle = "rgba(" + LINE_COLOR + ", " + opacity + ")";
           ctx.beginPath();
           ctx.moveTo(p1.x, p1.y);
@@ -102,14 +103,11 @@
       }
     }
 
-    if (!reduceMotion) requestAnimationFrame(tick);
+    requestAnimationFrame(tick);
   }
 
   window.addEventListener("resize", resize);
   window.addEventListener("load", resize);
   resize();
-  tick();
-  if (reduceMotion) {
-    // draw a single static frame, points already seeded at base position
-  }
+  requestAnimationFrame(tick);
 })();
