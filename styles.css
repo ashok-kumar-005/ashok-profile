@@ -34,12 +34,73 @@ a:focus-visible, button:focus-visible {
 
 img { max-width: 100%; display: block; }
 
-#bg-network {
-  position: absolute;
-  top: 0;
-  left: 0;
+.bg-mesh {
+  position: fixed;
+  inset: 0;
   z-index: 0;
+  overflow: hidden;
   pointer-events: none;
+}
+
+.mesh-blob {
+  position: absolute;
+  width: 52vmax;
+  height: 52vmax;
+  border-radius: 50%;
+  filter: blur(64px);
+  opacity: 0.28;
+  will-change: transform;
+}
+
+.mesh-blob--1 {
+  top: -18vmax;
+  left: -14vmax;
+  background: var(--accent);
+  animation: drift-a 26s ease-in-out infinite;
+}
+
+.mesh-blob--2 {
+  top: -10vmax;
+  right: -16vmax;
+  background: var(--rust);
+  animation: drift-b 32s ease-in-out infinite;
+}
+
+.mesh-blob--3 {
+  bottom: -20vmax;
+  left: 8vw;
+  width: 44vmax;
+  height: 44vmax;
+  background: var(--sage);
+  animation: drift-c 30s ease-in-out infinite;
+}
+
+.mesh-blob--4 {
+  bottom: -16vmax;
+  right: -10vmax;
+  width: 38vmax;
+  height: 38vmax;
+  background: var(--brass);
+  animation: drift-a 36s ease-in-out infinite reverse;
+}
+
+@keyframes drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(4vmax, 5vmax) scale(1.08); }
+}
+
+@keyframes drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-5vmax, 4vmax) scale(1.06); }
+}
+
+@keyframes drift-c {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(3vmax, -4vmax) scale(1.1); }
+}
+
+@media (max-width: 640px) {
+  .mesh-blob { filter: blur(46px); opacity: 0.22; }
 }
 
 header, main, footer {
@@ -301,4 +362,5 @@ main {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .thumb, .link-btn { transition: none; }
+  .mesh-blob { animation: none; }
 }
