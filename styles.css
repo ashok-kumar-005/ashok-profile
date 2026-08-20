@@ -681,8 +681,9 @@ a:focus-visible {
   gap: 1.5rem;
   padding: 2.5rem 0;
   border-top: 1px solid var(--line-dark);
-  border-bottom: 1px solid var(--line-dark);
 }
+
+.role-item:last-child { border-bottom: 1px solid var(--line-dark); }
 
 @media (min-width: 760px) {
   .role-item { grid-template-columns: 190px 1fr; gap: 3rem; }
@@ -691,9 +692,67 @@ a:focus-visible {
 .role-logo {
   color: #fff;
   padding-top: 0.35rem;
+  /* Grid items stretch by default, which turns the light tile below into a
+     full-height white column. */
+  align-self: start;
 }
 
 .role-logo svg { width: 118px; height: 40px; }
+
+/* Appcino's wordmark is dark, so it needs a light tile to sit on */
+.role-logo--tile {
+  width: 156px;
+  padding: 0.7rem 0.85rem;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.role-logo--tile img { width: 100%; height: auto; }
+
+/* ---- Role progression within one company ---- */
+
+.role-track {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0 0 0 1rem;
+  border-left: 1px solid var(--line-dark);
+}
+
+.role-track li {
+  position: relative;
+  padding: 0.3rem 0;
+  font-size: 0.88rem;
+  color: #cfd0da;
+}
+
+.role-track li::before {
+  content: "";
+  position: absolute;
+  left: -1.3rem;
+  top: 0.95rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 1px solid var(--muted);
+}
+
+/* Newest step is the current one */
+.role-track li:first-child { color: #fff; }
+.role-track li:first-child::before {
+  background: var(--coral);
+  border-color: var(--coral);
+}
+
+.track-when {
+  display: inline-block;
+  min-width: 5.5rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-dark);
+}
 
 .role-when {
   margin: 0 0 0.55rem;
