@@ -12,6 +12,43 @@
 </head>
 <body>
 
+<svg aria-hidden="true" style="position:absolute; width:0; height:0; overflow:hidden;">
+  <defs>
+    <symbol id="icon-web" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4.5" width="18" height="15" rx="2" />
+      <line x1="3" y1="8.5" x2="21" y2="8.5" />
+      <line x1="6.5" y1="6.5" x2="6.5" y2="6.5" />
+      <line x1="9" y1="6.5" x2="9" y2="6.5" />
+    </symbol>
+    <symbol id="icon-ios" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="6.5" y="2.5" width="11" height="19" rx="2.5" />
+      <line x1="10.5" y1="18.3" x2="13.5" y2="18.3" />
+    </symbol>
+    <symbol id="icon-macos" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="12" rx="1.5" />
+      <path d="M8 20h8" />
+      <path d="M12 16v4" />
+    </symbol>
+    <symbol id="icon-cli" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <path d="M7 9.5l3 2.5-3 2.5" />
+      <line x1="12" y1="14.5" x2="16" y2="14.5" />
+    </symbol>
+    <symbol id="icon-ml" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4" y1="20" x2="20" y2="20" />
+      <rect x="6" y="13" width="3" height="7" />
+      <rect x="11" y="9" width="3" height="11" />
+      <rect x="16" y="5" width="3" height="15" />
+    </symbol>
+    <symbol id="icon-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 2.5h8l4 4V21.5H6z" />
+      <path d="M14 2.5V6.5H18" />
+      <line x1="8.5" y1="12" x2="15.5" y2="12" />
+      <line x1="8.5" y1="16" x2="15.5" y2="16" />
+    </symbol>
+  </defs>
+</svg>
+
 <header class="hero">
   <canvas id="bg-flow" aria-hidden="true"></canvas>
   <div class="hero-inner">
@@ -161,62 +198,77 @@
     <h2 class="group-title">Solutions Built with Claude</h2>
     <ul class="solutions-list">
       <li class="solution-card">
+        <span class="solution-icon ml" title="ML pipeline"><svg><use href="#icon-ml" /></svg></span>
         <h3>Capstone: Smart Billing &amp; Premium Intelligence</h3>
         <p>A Python ML pipeline that predicts which insurance customers are at risk of lapsing and automates tailored retention outreach through an Appian-based dashboard.</p>
       </li>
       <li class="solution-card">
+        <span class="solution-icon web" title="Web app"><svg><use href="#icon-web" /></svg></span>
         <h3>Video Downloader</h3>
         <p>A Next.js web app for downloading YouTube, Instagram, and Facebook videos as MP4 or MP3, with a multi-tier extraction fallback.</p>
       </li>
       <li class="solution-card">
+        <span class="solution-icon cli" title="CLI project"><svg><use href="#icon-cli" /></svg></span>
         <h3>MCP Chat (CLI Project)</h3>
         <p>A Python command-line chat client for the Anthropic API with document retrieval, slash-command prompts, and pluggable MCP tools.</p>
       </li>
       <li class="solution-card">
+        <span class="solution-icon ios" title="iOS app"><svg><use href="#icon-ios" /></svg></span>
         <h3>LudoPlay</h3>
         <p>A native SwiftUI iOS Ludo board game with offline single-player and pass-and-play modes.</p>
       </li>
       <li class="solution-card">
+        <span class="solution-icon web" title="Web app"><svg><use href="#icon-web" /></svg></span>
         <h3>Steno</h3>
         <p>A dictation-practice web app where users transcribe audio and get word-by-word accuracy feedback, built with FastAPI and Supabase.</p>
       </li>
       <li class="solution-card">
+        <span class="solution-icon ios" title="iOS app"><svg><use href="#icon-ios" /></svg></span>
         <h3>Clip History Mobile</h3>
         <p>A companion iOS app that captures copied text and photos on iPhone and relays them to the Mac Clip History app via Google Drive.</p>
       </li>
       <li class="solution-card">
+        <span class="solution-icon web" title="Progressive web app"><svg><use href="#icon-web" /></svg></span>
         <h3>Ironlog</h3>
         <p>A gym-workout-tracking progressive web app for logging sets, tracking PRs, and viewing exercise demo videos, with offline support.</p>
       </li>
       <li class="solution-card">
+        <span class="solution-icon ios" title="iOS app"><svg><use href="#icon-ios" /></svg></span>
         <h3>CountDown Widget</h3>
         <p>An iOS app with a home-screen widget extension for a countdown timer.</p>
       </li>
       <li class="solution-card">
+        <span class="solution-icon web" title="Progressive web app"><svg><use href="#icon-web" /></svg></span>
         <h3>Chess Analytics</h3>
         <p>A browser-only PWA that pulls a user&rsquo;s chess.com game history and analyzes it, backed by Supabase.</p>
       </li>
       <li class="solution-card">
+        <span class="solution-icon web" title="Web app"><svg><use href="#icon-web" /></svg></span>
         <h3>UIGen</h3>
         <p>An AI-powered React component generator with live preview, built on Next.js and the Anthropic API.</p>
       </li>
       <li class="solution-card">
+        <span class="solution-icon web" title="Web app"><svg><use href="#icon-web" /></svg></span>
         <h3>Quizbase</h3>
         <p>A Next.js and Supabase quiz application for creating and taking quizzes.</p>
       </li>
       <li class="solution-card">
+        <span class="solution-icon web" title="Web app"><svg><use href="#icon-web" /></svg></span>
         <h3>Expense Tracker</h3>
         <p>A personal expense-tracking web app covering accounts, transactions, credit cards, credit-score history, and event budgeting, built with FastAPI and Supabase.</p>
       </li>
       <li class="solution-card">
+        <span class="solution-icon macos" title="macOS app"><svg><use href="#icon-macos" /></svg></span>
         <h3>Clip History</h3>
         <p>A native macOS menu-bar clipboard-history manager with global-hotkey popup and image support.</p>
       </li>
       <li class="solution-card">
+        <span class="solution-icon doc" title="Document templates"><svg><use href="#icon-doc" /></svg></span>
         <h3>Letter Formatting</h3>
         <p>A set of HTML templates that render a bank-branded letterhead correctly through Appian&rsquo;s HTML-to-PDF service.</p>
       </li>
       <li class="solution-card">
+        <span class="solution-icon cli" title="CLI / agent project"><svg><use href="#icon-cli" /></svg></span>
         <h3>Queries</h3>
         <p>A TypeScript project using the Claude Agent SDK to generate and run e-commerce database queries, including a Slack alert integration for overdue orders.</p>
       </li>

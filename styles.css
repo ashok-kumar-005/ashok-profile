@@ -240,6 +240,30 @@ main {
   box-shadow: 0 10px 24px rgba(20, 22, 31, 0.1);
 }
 
+.solution-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.solution-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.solution-icon.web { color: var(--accent); }
+.solution-icon.ios { color: var(--rust); }
+.solution-icon.macos { color: var(--brass); }
+.solution-icon.cli { color: var(--ink); }
+.solution-icon.ml { color: var(--sage); }
+.solution-icon.doc { color: var(--ink-soft); }
+
 .solution-card h3 {
   font-family: var(--display);
   font-weight: 600;
