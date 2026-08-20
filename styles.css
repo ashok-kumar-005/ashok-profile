@@ -462,6 +462,18 @@ a:focus-visible {
   50%      { transform: translate(6vmax, -8vmax) scale(1.18); }
 }
 
+/* ---- Signal network canvas ---- */
+
+#neural {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: fade-in 2s ease 1.2s backwards;
+}
+
 /* ---- Floating shapes (3 parallax depth layers) ---- */
 
 .shapes { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
@@ -708,51 +720,6 @@ a:focus-visible {
 }
 
 .role-logo--tile img { width: 100%; height: auto; }
-
-/* ---- Role progression within one company ---- */
-
-.role-track {
-  list-style: none;
-  margin: 1.25rem 0 0;
-  padding: 0 0 0 1rem;
-  border-left: 1px solid var(--line-dark);
-}
-
-.role-track li {
-  position: relative;
-  padding: 0.3rem 0;
-  font-size: 0.88rem;
-  color: #cfd0da;
-}
-
-.role-track li::before {
-  content: "";
-  position: absolute;
-  left: -1.3rem;
-  top: 0.95rem;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--ink);
-  border: 1px solid var(--muted);
-}
-
-/* Newest step is the current one */
-.role-track li:first-child { color: #fff; }
-.role-track li:first-child::before {
-  background: var(--coral);
-  border-color: var(--coral);
-}
-
-.track-when {
-  display: inline-block;
-  min-width: 5.5rem;
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted-dark);
-}
 
 .role-when {
   margin: 0 0 0.55rem;

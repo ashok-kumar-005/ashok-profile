@@ -27,9 +27,12 @@ Full-screen hero plus alternating dark/light bands, inspired by
   clears itself even if the script never runs.
 - Hero: oversized name, serif-italic role, coral CTA with a sliding arrow, a
   giant ghosted "AK" monogram, a fixed social rail, and a scroll cue.
-- **Background motion:** three blurred aurora glows drift on long, offset loops,
-  and ten geometric shapes float and rotate across three depth layers that
-  parallax to the pointer.
+- **Background motion:** a canvas signal network — drifting nodes link to their
+  neighbours and fire pulses along those links, which sometimes chain onward —
+  layered over three blurred aurora glows and ten floating, rotating geometric
+  shapes. The network runs on its own so phones get motion with no pointer;
+  the shapes additionally parallax to a mouse. It pauses when the hero scrolls
+  out of view or the tab is hidden.
 - Fixed top bar goes solid past the hero; nav underlines the active section.
 - Sections: About → Experience (Xebia and Appcino, each with a role-progression
   timeline; the Xebia wordmark is an inline `currentColor` SVG) →
