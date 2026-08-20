@@ -31,6 +31,9 @@ Full-screen hero plus alternating dark/light bands, inspired by
   and ten geometric shapes float and rotate across three depth layers that
   parallax to the pointer.
 - Fixed top bar goes solid past the hero; nav underlines the active section.
+- Sections: About → Experience (Xebia, Senior Consultant, with the Xebia
+  wordmark as an inline `currentColor` SVG) → Certifications → Solutions →
+  Education.
 - Certifications are a thumbnail grid with a coral "View" chip on hover;
   solutions are numbered rows with outlined numerals and tech tags.
 - Content fades up as it scrolls into view (skipped for `prefers-reduced-motion`).

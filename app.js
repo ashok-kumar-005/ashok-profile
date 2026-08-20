@@ -97,7 +97,8 @@
   /* ---------- Reveal content as it enters the viewport ---------- */
 
   var targets = document.querySelectorAll(
-    ".band-head, .about-grid, .cert-group, .cert, .work, .edu li, .foot-links, .foot-fine"
+    ".band-head, .about-grid, .role-item, .cert-group, .cert, .work, .edu li, " +
+    ".foot-links, .foot-fine"
   );
 
   if (reduceMotion || !("IntersectionObserver" in window)) {

@@ -126,9 +126,10 @@ a:focus-visible {
 
 /* `backwards`, not `both`: a finished animation with a forwards fill would
    keep winning over normal styles and kill the button's hover lift. */
-.hero-name   { animation: rise 0.85s var(--ease) 1.28s backwards; }
-.hero-sub    { animation: rise 0.85s var(--ease) 1.40s backwards; }
-.hero .btn   { animation: rise 0.85s var(--ease) 1.52s backwards; }
+.hero-now    { animation: rise 0.85s var(--ease) 1.20s backwards; }
+.hero-name   { animation: rise 0.85s var(--ease) 1.30s backwards; }
+.hero-sub    { animation: rise 0.85s var(--ease) 1.42s backwards; }
+.hero .btn   { animation: rise 0.85s var(--ease) 1.54s backwards; }
 .scroll-cue  { animation: rise-cue 0.85s var(--ease) 1.72s backwards; }
 .topbar      { animation: rise 0.7s var(--ease) 1.15s backwards; }
 .rail        { animation: rise-rail 0.8s var(--ease) 1.62s backwards; }
@@ -304,6 +305,26 @@ a:focus-visible {
 @media (max-width: 760px) {
   .watermark { right: -6%; opacity: 0.32; }
 }
+
+/* Current role line above the name */
+.hero-now {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 1.15rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.hero-now-logo {
+  display: inline-flex;
+  color: #fff;
+}
+
+.hero-now-logo svg { width: 62px; height: 21px; }
 
 .hero-name {
   margin: 0;
@@ -649,6 +670,68 @@ a:focus-visible {
   font-style: italic;
   color: var(--muted);
 }
+
+/* ================= EXPERIENCE ================= */
+
+.roles { list-style: none; margin: 0; padding: 0; }
+
+.role-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--line-dark);
+  border-bottom: 1px solid var(--line-dark);
+}
+
+@media (min-width: 760px) {
+  .role-item { grid-template-columns: 190px 1fr; gap: 3rem; }
+}
+
+.role-logo {
+  color: #fff;
+  padding-top: 0.35rem;
+}
+
+.role-logo svg { width: 118px; height: 40px; }
+
+.role-when {
+  margin: 0 0 0.55rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--coral);
+}
+
+.role-title {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.45rem, 2.6vw, 1.9rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.role-org {
+  margin: 0.35rem 0 0;
+  font-style: italic;
+  font-size: 1.02rem;
+  color: #cfd0da;
+}
+
+.role-org span { color: var(--muted-dark); }
+
+.role-desc {
+  margin: 0.9rem 0 0;
+  max-width: 44rem;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--muted-dark);
+}
+
+.role-item .tags { margin-top: 1.1rem; }
 
 /* ================= CERTIFICATIONS ================= */
 
