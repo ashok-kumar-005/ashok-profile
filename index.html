@@ -7,655 +7,526 @@
 <meta name="description" content="Ashok Kumar — Appian developer and AI practitioner. Certifications in Appian, Claude/Anthropic, and applied AI, plus solutions built with Claude." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<a class="skip-link" href="#content">Skip to content</a>
-
-<div id="spotlight" aria-hidden="true"></div>
+<a class="skip-link" href="#about">Skip to content</a>
 
 <svg aria-hidden="true" style="position:absolute; width:0; height:0; overflow:hidden;">
   <defs>
-    <symbol id="icon-web" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="4.5" width="18" height="15" rx="2" />
-      <line x1="3" y1="8.5" x2="21" y2="8.5" />
-      <line x1="6.5" y1="6.5" x2="6.5" y2="6.5" />
-      <line x1="9" y1="6.5" x2="9" y2="6.5" />
+    <symbol id="icon-web" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4.5" width="18" height="15" rx="2" /><line x1="3" y1="8.5" x2="21" y2="8.5" />
+      <line x1="6.5" y1="6.5" x2="6.5" y2="6.5" /><line x1="9" y1="6.5" x2="9" y2="6.5" />
     </symbol>
-    <symbol id="icon-ios" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="6.5" y="2.5" width="11" height="19" rx="2.5" />
-      <line x1="10.5" y1="18.3" x2="13.5" y2="18.3" />
+    <symbol id="icon-ios" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="6.5" y="2.5" width="11" height="19" rx="2.5" /><line x1="10.5" y1="18.3" x2="13.5" y2="18.3" />
     </symbol>
-    <symbol id="icon-macos" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="4" width="18" height="12" rx="1.5" />
-      <path d="M8 20h8" />
-      <path d="M12 16v4" />
+    <symbol id="icon-macos" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="12" rx="1.5" /><path d="M8 20h8" /><path d="M12 16v4" />
     </symbol>
-    <symbol id="icon-cli" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="4" width="18" height="16" rx="2" />
-      <path d="M7 9.5l3 2.5-3 2.5" />
-      <line x1="12" y1="14.5" x2="16" y2="14.5" />
+    <symbol id="icon-cli" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="16" rx="2" /><path d="M7 9.5l3 2.5-3 2.5" /><line x1="12" y1="14.5" x2="16" y2="14.5" />
     </symbol>
-    <symbol id="icon-ml" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="4" y1="20" x2="20" y2="20" />
-      <rect x="6" y="13" width="3" height="7" />
-      <rect x="11" y="9" width="3" height="11" />
-      <rect x="16" y="5" width="3" height="15" />
+    <symbol id="icon-ml" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4" y1="20" x2="20" y2="20" /><rect x="6" y="13" width="3" height="7" />
+      <rect x="11" y="9" width="3" height="11" /><rect x="16" y="5" width="3" height="15" />
     </symbol>
-    <symbol id="icon-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M6 2.5h8l4 4V21.5H6z" />
-      <path d="M14 2.5V6.5H18" />
-      <line x1="8.5" y1="12" x2="15.5" y2="12" />
-      <line x1="8.5" y1="16" x2="15.5" y2="16" />
+    <symbol id="icon-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 2.5h8l4 4V21.5H6z" /><path d="M14 2.5V6.5H18" />
+      <line x1="8.5" y1="12" x2="15.5" y2="12" /><line x1="8.5" y1="16" x2="15.5" y2="16" />
     </symbol>
     <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="currentColor">
       <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
     </symbol>
-    <symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="9.5" />
-      <line x1="2.5" y1="12" x2="21.5" y2="12" />
+    <symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9.5" /><line x1="2.5" y1="12" x2="21.5" y2="12" />
       <path d="M12 2.5a14.5 14.5 0 0 1 0 19 14.5 14.5 0 0 1 0-19z" />
-    </symbol>
-    <symbol id="icon-arrow" viewBox="0 0 20 20" fill="currentColor">
-      <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06z" clip-rule="evenodd" />
     </symbol>
   </defs>
 </svg>
 
-<div class="layout">
+<!-- ================= TOP BAR ================= -->
+<header class="topbar" id="topbar">
+  <a class="brand" href="#top" aria-label="Ashok Kumar — top of page">
+    <span class="brand-mark">AK</span>
+  </a>
+  <nav class="topnav" aria-label="Primary">
+    <a href="#certifications">Certifications</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#education">Education</a>
+  </nav>
+</header>
 
-  <!-- ============ STICKY LEFT PANE ============ -->
-  <header class="pane-left">
-    <div class="pane-left-top">
-      <h1 class="name"><a href="/">Ashok Kumar</a></h1>
-      <h2 class="role">Appian Developer &amp; AI Practitioner</h2>
-      <p class="lede">
-        I build enterprise workflow applications on Appian and practical
-        AI solutions with Claude.
-      </p>
+<!-- ================= SOCIAL RAIL ================= -->
+<ul class="rail" aria-label="Profile links">
+  <li>
+    <a href="https://www.linkedin.com/in/ashok-kumar-a9447587k/" target="_blank" rel="noopener" aria-label="LinkedIn (opens in a new tab)">
+      <svg><use href="#icon-linkedin" /></svg>
+    </a>
+  </li>
+  <li>
+    <a href="https://community.appian.com/members/ashokk6660-261402" target="_blank" rel="noopener" aria-label="Appian Community profile (opens in a new tab)">
+      <svg><use href="#icon-globe" /></svg>
+    </a>
+  </li>
+</ul>
 
-      <nav class="nav" aria-label="In-page jump links">
-        <ul>
-          <li><a class="nav-link" href="#about"><span class="nav-line"></span><span class="nav-text">About</span></a></li>
-          <li><a class="nav-link" href="#certifications"><span class="nav-line"></span><span class="nav-text">Certifications</span></a></li>
-          <li><a class="nav-link" href="#solutions"><span class="nav-line"></span><span class="nav-text">Solutions</span></a></li>
-          <li><a class="nav-link" href="#education"><span class="nav-line"></span><span class="nav-text">Education</span></a></li>
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="shapes" aria-hidden="true">
+    <span class="shape shape-tri-a"></span>
+    <span class="shape shape-tri-b"></span>
+    <span class="shape shape-arc-a"></span>
+    <span class="shape shape-arc-b"></span>
+    <span class="shape shape-slash-a"></span>
+    <span class="shape shape-slash-b"></span>
+    <span class="shape shape-dot"></span>
+  </div>
+
+  <span class="watermark" aria-hidden="true">AK</span>
+
+  <div class="hero-inner">
+    <h1 class="hero-name">Ashok&nbsp;Kumar</h1>
+    <p class="hero-sub">Appian Developer &amp; AI Practitioner</p>
+    <a class="btn" href="#about">
+      <span>About Me</span>
+      <svg class="btn-arrow" viewBox="0 0 40 8" aria-hidden="true">
+        <line x1="0" y1="4" x2="34" y2="4" stroke="currentColor" stroke-width="1.4" />
+        <path d="M30 0.5 L34 4 L30 7.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
+  </div>
+
+  <a class="scroll-cue" href="#about" aria-label="Scroll to content">
+    <span>Credentials</span>
+    <span class="cue-line" aria-hidden="true"></span>
+  </a>
+</section>
+
+<main>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="band band-paper" id="about">
+    <div class="wrap">
+      <header class="band-head">
+        <p class="eyebrow">01 &mdash; About</p>
+        <h2 class="band-title">Enterprise workflows,<br />and AI that ships.</h2>
+      </header>
+
+      <div class="about-grid">
+        <div class="prose">
+          <p>
+            I have <strong>5+ years of experience</strong> building enterprise
+            workflow applications on Appian, backed by Associate and Senior
+            Developer certifications from Appian Academy.
+          </p>
+          <p>
+            Alongside that, I&rsquo;m an active AI practitioner &mdash; certified
+            across <strong>Anthropic&rsquo;s Claude ecosystem</strong> and building
+            practical AI solutions with Claude across web, iOS, macOS, and CLI
+            projects.
+          </p>
+          <p>
+            This page is the record of both: the credentials I&rsquo;ve earned and
+            the things I&rsquo;ve actually shipped with them.
+          </p>
+        </div>
+
+        <ul class="stats">
+          <li><span class="stat-num">5+</span><span class="stat-label">Years building on Appian</span></li>
+          <li><span class="stat-num">18</span><span class="stat-label">Certifications earned</span></li>
+          <li><span class="stat-num">15</span><span class="stat-label">Solutions built with Claude</span></li>
         </ul>
-      </nav>
-    </div>
-
-    <ul class="socials" aria-label="Profile links">
-      <li>
-        <a href="https://www.linkedin.com/in/ashok-kumar-a9447587k/" target="_blank" rel="noopener" aria-label="LinkedIn (opens in a new tab)" title="LinkedIn">
-          <svg><use href="#icon-linkedin" /></svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://community.appian.com/members/ashokk6660-261402" target="_blank" rel="noopener" aria-label="Appian Community profile (opens in a new tab)" title="Appian Community">
-          <svg><use href="#icon-globe" /></svg>
-        </a>
-      </li>
-    </ul>
-  </header>
-
-  <!-- ============ SCROLLING RIGHT PANE ============ -->
-  <main class="pane-right" id="content">
-
-    <!-- ---------- About ---------- -->
-    <section id="about" class="section" aria-label="About">
-      <h2 class="section-heading-mobile">About</h2>
-      <div class="prose">
-        <p>
-          I have <strong>5+ years of experience</strong> building enterprise workflow
-          applications on Appian, backed by Associate and Senior Developer
-          certifications from Appian Academy.
-        </p>
-        <p>
-          Alongside that, I&rsquo;m an active AI practitioner &mdash; certified across
-          <strong>Anthropic&rsquo;s Claude ecosystem</strong> and building practical AI
-          solutions with Claude across web, iOS, macOS, and CLI projects.
-        </p>
-        <p>
-          This page is the record of both: the credentials I&rsquo;ve earned and the
-          things I&rsquo;ve actually shipped with them.
-        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ---------- Certifications ---------- -->
-    <section id="certifications" class="section" aria-label="Certifications">
-      <h2 class="section-heading-mobile">Certifications</h2>
+  <!-- ================= CERTIFICATIONS ================= -->
+  <section class="band band-paper band-tight" id="certifications">
+    <div class="wrap">
+      <header class="band-head">
+        <p class="eyebrow">02 &mdash; Certifications</p>
+        <h2 class="band-title">The paperwork.</h2>
+        <p class="band-lede">Click any certificate to open it full size.</p>
+      </header>
 
-      <h3 class="group-label">Appian</h3>
-      <ul class="entry-list">
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/appian-senior.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/appian-senior.png" alt="" loading="lazy" />
+      <h3 class="cert-group">Appian</h3>
+      <ul class="cert-grid">
+        <li class="cert">
+          <a class="cert-shot" href="assets/appian-senior.png" target="_blank" rel="noopener">
+            <img src="assets/appian-senior.png" alt="Appian Certified Senior Developer certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/appian-senior.png" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                Appian Certified Senior Developer
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Appian Academy</p>
-            <p class="entry-date">Awarded Nov 2024 &middot; Valid through May 2026</p>
-          </div>
+          <h4 class="cert-name">Appian Certified Senior Developer</h4>
+          <p class="cert-issuer">Appian Academy</p>
+          <p class="cert-date">Awarded Nov 2024 &middot; Valid through May 2026</p>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/appian-associate.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/appian-associate.png" alt="" loading="lazy" />
+        <li class="cert">
+          <a class="cert-shot" href="assets/appian-associate.png" target="_blank" rel="noopener">
+            <img src="assets/appian-associate.png" alt="Appian Certified Associate Developer certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/appian-associate.png" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                Appian Certified Associate Developer
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Appian Academy</p>
-            <p class="entry-date">Awarded Jul 2022</p>
-          </div>
+          <h4 class="cert-name">Appian Certified Associate Developer</h4>
+          <p class="cert-issuer">Appian Academy</p>
+          <p class="cert-date">Awarded Jul 2022</p>
         </li>
       </ul>
 
-      <h3 class="group-label">AI &amp; Claude</h3>
-      <ul class="entry-list">
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/claude-associate.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/claude-associate.png" alt="" loading="lazy" />
+      <h3 class="cert-group">AI &amp; Claude</h3>
+      <ul class="cert-grid">
+        <li class="cert">
+          <a class="cert-shot" href="assets/claude-associate.png" target="_blank" rel="noopener">
+            <img src="assets/claude-associate.png" alt="Claude Certified Associate - Foundations certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/claude-associate.png" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                Claude Certified Associate &mdash; Foundations
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Anthropic</p>
-            <p class="entry-date">Issued Aug 2026 &middot; Expires Aug 2027</p>
-            <p class="entry-verify">
-              <a href="https://www.credly.com/badges/916d6f1f-ab98-4e6d-8abf-058e4a17902e" target="_blank" rel="noopener">Verify on Credly</a>
-            </p>
-          </div>
+          <h4 class="cert-name">Claude Certified Associate &mdash; Foundations</h4>
+          <p class="cert-issuer">Anthropic</p>
+          <p class="cert-date">Issued Aug 2026 &middot; Expires Aug 2027</p>
+          <a class="cert-verify" href="https://www.credly.com/badges/916d6f1f-ab98-4e6d-8abf-058e4a17902e" target="_blank" rel="noopener">Verify on Credly</a>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/xebia-xai.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/xebia-xai.jpeg" alt="" loading="lazy" />
+        <li class="cert">
+          <a class="cert-shot" href="assets/xebia-xai.jpeg" target="_blank" rel="noopener">
+            <img src="assets/xebia-xai.jpeg" alt="Certified X-AI Practitioner certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/xebia-xai.jpeg" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                Certified X-AI Practitioner
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Xebia &mdash; Foundational AI</p>
-            <p class="entry-date">Issued Dec 2025</p>
-          </div>
+          <h4 class="cert-name">Certified X-AI Practitioner</h4>
+          <p class="cert-issuer">Xebia &mdash; Foundational AI</p>
+          <p class="cert-date">Issued Dec 2025</p>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/ai-fluency-framework.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/ai-fluency-framework.png" alt="" loading="lazy" />
+        <li class="cert">
+          <a class="cert-shot" href="assets/ai-fluency-framework.png" target="_blank" rel="noopener">
+            <img src="assets/ai-fluency-framework.png" alt="AI Fluency: Framework and Foundations certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/ai-fluency-framework.png" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                AI Fluency: Framework &amp; Foundations
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Anthropic</p>
-            <p class="entry-date">Certificate of completion</p>
-          </div>
+          <h4 class="cert-name">AI Fluency: Framework &amp; Foundations</h4>
+          <p class="cert-issuer">Anthropic</p>
+          <p class="cert-date">Certificate of completion</p>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/ai-fluency-capabilities.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/ai-fluency-capabilities.png" alt="" loading="lazy" />
+        <li class="cert">
+          <a class="cert-shot" href="assets/ai-fluency-capabilities.png" target="_blank" rel="noopener">
+            <img src="assets/ai-fluency-capabilities.png" alt="AI Fluency: AI Capabilities and Limitations certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/ai-fluency-capabilities.png" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                AI Fluency: AI Capabilities &amp; Limitations
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Anthropic</p>
-            <p class="entry-date">Certificate of completion</p>
-          </div>
+          <h4 class="cert-name">AI Fluency: AI Capabilities &amp; Limitations</h4>
+          <p class="cert-issuer">Anthropic</p>
+          <p class="cert-date">Certificate of completion</p>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/claude-code-101.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/claude-code-101.png" alt="" loading="lazy" />
+        <li class="cert">
+          <a class="cert-shot" href="assets/claude-code-101.png" target="_blank" rel="noopener">
+            <img src="assets/claude-code-101.png" alt="Claude Code 101 certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/claude-code-101.png" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                Claude Code 101
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Anthropic</p>
-            <p class="entry-date">Certificate of completion</p>
-          </div>
+          <h4 class="cert-name">Claude Code 101</h4>
+          <p class="cert-issuer">Anthropic</p>
+          <p class="cert-date">Certificate of completion</p>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/claude-101.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/claude-101.png" alt="" loading="lazy" />
+        <li class="cert">
+          <a class="cert-shot" href="assets/claude-101.png" target="_blank" rel="noopener">
+            <img src="assets/claude-101.png" alt="Claude 101 certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/claude-101.png" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                Claude 101
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Anthropic</p>
-            <p class="entry-date">Certificate of completion</p>
-          </div>
+          <h4 class="cert-name">Claude 101</h4>
+          <p class="cert-issuer">Anthropic</p>
+          <p class="cert-date">Certificate of completion</p>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/mcp-intro.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/mcp-intro.png" alt="" loading="lazy" />
+        <li class="cert">
+          <a class="cert-shot" href="assets/mcp-intro.png" target="_blank" rel="noopener">
+            <img src="assets/mcp-intro.png" alt="Introduction to Model Context Protocol certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/mcp-intro.png" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                Introduction to Model Context Protocol
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Anthropic</p>
-            <p class="entry-date">Certificate of completion</p>
-          </div>
+          <h4 class="cert-name">Introduction to Model Context Protocol</h4>
+          <p class="cert-issuer">Anthropic</p>
+          <p class="cert-date">Certificate of completion</p>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/prompt-engineering.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/prompt-engineering.jpeg" alt="" loading="lazy" />
+        <li class="cert">
+          <a class="cert-shot" href="assets/prompt-engineering.jpeg" target="_blank" rel="noopener">
+            <img src="assets/prompt-engineering.jpeg" alt="Prompt Engineering course certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/prompt-engineering.jpeg" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                Prompt Engineering
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Sololearn</p>
-            <p class="entry-date">Completed Oct 2025</p>
-          </div>
+          <h4 class="cert-name">Prompt Engineering</h4>
+          <p class="cert-issuer">Sololearn</p>
+          <p class="cert-date">Completed Oct 2025</p>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/ml-beginners.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/ml-beginners.jpeg" alt="" loading="lazy" />
+        <li class="cert">
+          <a class="cert-shot" href="assets/ml-beginners.jpeg" target="_blank" rel="noopener">
+            <img src="assets/ml-beginners.jpeg" alt="Machine Learning for Beginners course certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/ml-beginners.jpeg" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                Machine Learning for Beginners
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Sololearn</p>
-            <p class="entry-date">Completed Oct 2025</p>
-          </div>
+          <h4 class="cert-name">Machine Learning for Beginners</h4>
+          <p class="cert-issuer">Sololearn</p>
+          <p class="cert-date">Completed Oct 2025</p>
         </li>
       </ul>
 
-      <h3 class="group-label">Security, Networking &amp; Foundations</h3>
-      <ul class="entry-list">
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/uiux-beginners.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/uiux-beginners.png" alt="" loading="lazy" />
+      <h3 class="cert-group">Security, Networking &amp; Foundations</h3>
+      <ul class="cert-grid">
+        <li class="cert">
+          <a class="cert-shot" href="assets/uiux-beginners.png" target="_blank" rel="noopener">
+            <img src="assets/uiux-beginners.png" alt="UI/UX for Beginners certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/uiux-beginners.png" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                UI/UX for Beginners
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Great Learning Academy</p>
-            <p class="entry-date">Completed May 2024</p>
-          </div>
+          <h4 class="cert-name">UI/UX for Beginners</h4>
+          <p class="cert-issuer">Great Learning Academy</p>
+          <p class="cert-date">Completed May 2024</p>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/cyber-security-ethical-hacking.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/cyber-security-ethical-hacking.jpeg" alt="" loading="lazy" />
+        <li class="cert">
+          <a class="cert-shot" href="assets/cyber-security-ethical-hacking.jpeg" target="_blank" rel="noopener">
+            <img src="assets/cyber-security-ethical-hacking.jpeg" alt="Cyber Security and Ethical Hacking certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/cyber-security-ethical-hacking.jpeg" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                Cyber Security and Ethical Hacking
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Board Infinity</p>
-            <p class="entry-date">Completed Jul 2021</p>
-          </div>
+          <h4 class="cert-name">Cyber Security and Ethical Hacking</h4>
+          <p class="cert-issuer">Board Infinity</p>
+          <p class="cert-date">Completed Jul 2021</p>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/bug-bounties-bootcamp.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/bug-bounties-bootcamp.jpeg" alt="" loading="lazy" />
+        <li class="cert">
+          <a class="cert-shot" href="assets/bug-bounties-bootcamp.jpeg" target="_blank" rel="noopener">
+            <img src="assets/bug-bounties-bootcamp.jpeg" alt="Broad Scope Bug Bounties From Scratch certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/bug-bounties-bootcamp.jpeg" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                Broad Scope Bug Bounties From Scratch
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Udemy</p>
-            <p class="entry-date">Completed Jun 2021</p>
-          </div>
+          <h4 class="cert-name">Broad Scope Bug Bounties From Scratch</h4>
+          <p class="cert-issuer">Udemy</p>
+          <p class="cert-date">Completed Jun 2021</p>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/wireshark-course.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/wireshark-course.jpeg" alt="" loading="lazy" />
+        <li class="cert">
+          <a class="cert-shot" href="assets/wireshark-course.jpeg" target="_blank" rel="noopener">
+            <img src="assets/wireshark-course.jpeg" alt="The Complete Wireshark Course certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/wireshark-course.jpeg" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                The Complete Wireshark Course
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Udemy</p>
-            <p class="entry-date">Completed Jan 2021</p>
-          </div>
+          <h4 class="cert-name">The Complete Wireshark Course</h4>
+          <p class="cert-issuer">Udemy</p>
+          <p class="cert-date">Completed Jan 2021</p>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/cisco-packet-tracer.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/cisco-packet-tracer.jpeg" alt="" loading="lazy" />
+        <li class="cert">
+          <a class="cert-shot" href="assets/cisco-packet-tracer.jpeg" target="_blank" rel="noopener">
+            <img src="assets/cisco-packet-tracer.jpeg" alt="Introduction to Packet Tracer certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/cisco-packet-tracer.jpeg" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                Introduction to Packet Tracer
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Cisco Networking Academy</p>
-            <p class="entry-date">Completed Jan 2021</p>
-          </div>
+          <h4 class="cert-name">Introduction to Packet Tracer</h4>
+          <p class="cert-issuer">Cisco Networking Academy</p>
+          <p class="cert-date">Completed Jan 2021</p>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/python-bootcamp.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/python-bootcamp.jpeg" alt="" loading="lazy" />
+        <li class="cert">
+          <a class="cert-shot" href="assets/python-bootcamp.jpeg" target="_blank" rel="noopener">
+            <img src="assets/python-bootcamp.jpeg" alt="2020 Complete Python Bootcamp certificate" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/python-bootcamp.jpeg" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                2020 Complete Python Bootcamp: Zero to Hero
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Udemy</p>
-            <p class="entry-date">Completed Aug 2020</p>
-          </div>
+          <h4 class="cert-name">2020 Complete Python Bootcamp: Zero to Hero</h4>
+          <p class="cert-issuer">Udemy</p>
+          <p class="cert-date">Completed Aug 2020</p>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <a class="entry-thumb" href="assets/vtf-internship-badge.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="assets/vtf-internship-badge.png" alt="" loading="lazy" />
+        <li class="cert">
+          <a class="cert-shot" href="assets/vtf-internship-badge.png" target="_blank" rel="noopener">
+            <img src="assets/vtf-internship-badge.png" alt="Virtually Testing Foundation Beginner Track Internship badge" loading="lazy" />
+            <span class="cert-open">View</span>
           </a>
-          <div class="entry-body">
-            <h4 class="entry-title">
-              <a href="assets/vtf-internship-badge.png" target="_blank" rel="noopener">
-                <span class="entry-link-cover"></span>
-                Beginner Track Internship
-                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
-              </a>
-            </h4>
-            <p class="entry-meta">Virtually Testing Foundation</p>
-            <p class="entry-date">Jan &ndash; Mar 2021</p>
-          </div>
+          <h4 class="cert-name">Beginner Track Internship</h4>
+          <p class="cert-issuer">Virtually Testing Foundation</p>
+          <p class="cert-date">Jan &ndash; Mar 2021</p>
         </li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <!-- ---------- Solutions ---------- -->
-    <section id="solutions" class="section" aria-label="Solutions built with Claude">
-      <h2 class="section-heading-mobile">Solutions</h2>
-      <p class="section-intro">Things I&rsquo;ve designed and shipped with Claude.</p>
+  <!-- ================= SOLUTIONS ================= -->
+  <section class="band band-ink" id="solutions">
+    <div class="wrap">
+      <header class="band-head">
+        <p class="eyebrow">03 &mdash; Solutions</p>
+        <h2 class="band-title">Built with Claude.</h2>
+        <p class="band-lede">Fifteen things I designed, built, and shipped.</p>
+      </header>
 
-      <ul class="entry-list">
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <span class="entry-icon ml" aria-hidden="true"><svg><use href="#icon-ml" /></svg></span>
-          <div class="entry-body">
-            <h4 class="entry-title plain">Capstone: Smart Billing &amp; Premium Intelligence</h4>
-            <p class="entry-desc">A Python ML pipeline that predicts which insurance customers are at risk of lapsing and automates tailored retention outreach through an Appian-based dashboard.</p>
+      <ol class="works">
+        <li class="work">
+          <span class="work-num" aria-hidden="true">01</span>
+          <div class="work-body">
+            <span class="work-kind ml"><svg><use href="#icon-ml" /></svg> ML pipeline</span>
+            <h3 class="work-title">Smart Billing &amp; Premium Intelligence</h3>
+            <p class="work-desc">A Python ML pipeline that predicts which insurance customers are at risk of lapsing and automates tailored retention outreach through an Appian-based dashboard.</p>
             <ul class="tags"><li>Python</li><li>Machine Learning</li><li>Appian</li></ul>
           </div>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <span class="entry-icon web" aria-hidden="true"><svg><use href="#icon-web" /></svg></span>
-          <div class="entry-body">
-            <h4 class="entry-title plain">Video Downloader</h4>
-            <p class="entry-desc">A Next.js web app for downloading YouTube, Instagram, and Facebook videos as MP4 or MP3, with a multi-tier extraction fallback.</p>
+        <li class="work">
+          <span class="work-num" aria-hidden="true">02</span>
+          <div class="work-body">
+            <span class="work-kind web"><svg><use href="#icon-web" /></svg> Web app</span>
+            <h3 class="work-title">Video Downloader</h3>
+            <p class="work-desc">A Next.js web app for downloading YouTube, Instagram, and Facebook videos as MP4 or MP3, with a multi-tier extraction fallback.</p>
             <ul class="tags"><li>Next.js</li><li>React</li></ul>
           </div>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <span class="entry-icon cli" aria-hidden="true"><svg><use href="#icon-cli" /></svg></span>
-          <div class="entry-body">
-            <h4 class="entry-title plain">MCP Chat</h4>
-            <p class="entry-desc">A Python command-line chat client for the Anthropic API with document retrieval, slash-command prompts, and pluggable MCP tools.</p>
+        <li class="work">
+          <span class="work-num" aria-hidden="true">03</span>
+          <div class="work-body">
+            <span class="work-kind cli"><svg><use href="#icon-cli" /></svg> CLI</span>
+            <h3 class="work-title">MCP Chat</h3>
+            <p class="work-desc">A Python command-line chat client for the Anthropic API with document retrieval, slash-command prompts, and pluggable MCP tools.</p>
             <ul class="tags"><li>Python</li><li>Anthropic API</li><li>MCP</li></ul>
           </div>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <span class="entry-icon ios" aria-hidden="true"><svg><use href="#icon-ios" /></svg></span>
-          <div class="entry-body">
-            <h4 class="entry-title plain">LudoPlay</h4>
-            <p class="entry-desc">A native SwiftUI iOS Ludo board game with offline single-player and pass-and-play modes.</p>
+        <li class="work">
+          <span class="work-num" aria-hidden="true">04</span>
+          <div class="work-body">
+            <span class="work-kind ios"><svg><use href="#icon-ios" /></svg> iOS</span>
+            <h3 class="work-title">LudoPlay</h3>
+            <p class="work-desc">A native SwiftUI iOS Ludo board game with offline single-player and pass-and-play modes.</p>
             <ul class="tags"><li>SwiftUI</li><li>iOS</li></ul>
           </div>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <span class="entry-icon web" aria-hidden="true"><svg><use href="#icon-web" /></svg></span>
-          <div class="entry-body">
-            <h4 class="entry-title plain">Steno</h4>
-            <p class="entry-desc">A dictation-practice web app where users transcribe audio and get word-by-word accuracy feedback.</p>
+        <li class="work">
+          <span class="work-num" aria-hidden="true">05</span>
+          <div class="work-body">
+            <span class="work-kind web"><svg><use href="#icon-web" /></svg> Web app</span>
+            <h3 class="work-title">Steno</h3>
+            <p class="work-desc">A dictation-practice web app where users transcribe audio and get word-by-word accuracy feedback.</p>
             <ul class="tags"><li>FastAPI</li><li>Supabase</li><li>Python</li></ul>
           </div>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <span class="entry-icon ios" aria-hidden="true"><svg><use href="#icon-ios" /></svg></span>
-          <div class="entry-body">
-            <h4 class="entry-title plain">Clip History Mobile</h4>
-            <p class="entry-desc">A companion iOS app that captures copied text and photos on iPhone and relays them to the Mac Clip History app via Google Drive.</p>
+        <li class="work">
+          <span class="work-num" aria-hidden="true">06</span>
+          <div class="work-body">
+            <span class="work-kind ios"><svg><use href="#icon-ios" /></svg> iOS</span>
+            <h3 class="work-title">Clip History Mobile</h3>
+            <p class="work-desc">A companion iOS app that captures copied text and photos on iPhone and relays them to the Mac Clip History app via Google Drive.</p>
             <ul class="tags"><li>iOS</li><li>Swift</li><li>Google Drive API</li></ul>
           </div>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <span class="entry-icon web" aria-hidden="true"><svg><use href="#icon-web" /></svg></span>
-          <div class="entry-body">
-            <h4 class="entry-title plain">Ironlog</h4>
-            <p class="entry-desc">A gym-workout-tracking progressive web app for logging sets, tracking PRs, and viewing exercise demo videos, with offline support.</p>
+        <li class="work">
+          <span class="work-num" aria-hidden="true">07</span>
+          <div class="work-body">
+            <span class="work-kind web"><svg><use href="#icon-web" /></svg> PWA</span>
+            <h3 class="work-title">Ironlog</h3>
+            <p class="work-desc">A gym-workout-tracking progressive web app for logging sets, tracking PRs, and viewing exercise demo videos, with offline support.</p>
             <ul class="tags"><li>PWA</li><li>Offline-first</li></ul>
           </div>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <span class="entry-icon ios" aria-hidden="true"><svg><use href="#icon-ios" /></svg></span>
-          <div class="entry-body">
-            <h4 class="entry-title plain">CountDown Widget</h4>
-            <p class="entry-desc">An iOS app with a home-screen widget extension for a countdown timer.</p>
+        <li class="work">
+          <span class="work-num" aria-hidden="true">08</span>
+          <div class="work-body">
+            <span class="work-kind ios"><svg><use href="#icon-ios" /></svg> iOS</span>
+            <h3 class="work-title">CountDown Widget</h3>
+            <p class="work-desc">An iOS app with a home-screen widget extension for a countdown timer.</p>
             <ul class="tags"><li>iOS</li><li>WidgetKit</li></ul>
           </div>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <span class="entry-icon web" aria-hidden="true"><svg><use href="#icon-web" /></svg></span>
-          <div class="entry-body">
-            <h4 class="entry-title plain">Chess Analytics</h4>
-            <p class="entry-desc">A browser-only PWA that pulls a user&rsquo;s chess.com game history and analyzes it.</p>
+        <li class="work">
+          <span class="work-num" aria-hidden="true">09</span>
+          <div class="work-body">
+            <span class="work-kind web"><svg><use href="#icon-web" /></svg> PWA</span>
+            <h3 class="work-title">Chess Analytics</h3>
+            <p class="work-desc">A browser-only PWA that pulls a user&rsquo;s chess.com game history and analyzes it.</p>
             <ul class="tags"><li>PWA</li><li>Supabase</li><li>chess.com API</li></ul>
           </div>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <span class="entry-icon web" aria-hidden="true"><svg><use href="#icon-web" /></svg></span>
-          <div class="entry-body">
-            <h4 class="entry-title plain">UIGen</h4>
-            <p class="entry-desc">An AI-powered React component generator with live preview.</p>
+        <li class="work">
+          <span class="work-num" aria-hidden="true">10</span>
+          <div class="work-body">
+            <span class="work-kind web"><svg><use href="#icon-web" /></svg> Web app</span>
+            <h3 class="work-title">UIGen</h3>
+            <p class="work-desc">An AI-powered React component generator with live preview.</p>
             <ul class="tags"><li>Next.js</li><li>Anthropic API</li><li>React</li></ul>
           </div>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <span class="entry-icon web" aria-hidden="true"><svg><use href="#icon-web" /></svg></span>
-          <div class="entry-body">
-            <h4 class="entry-title plain">Quizbase</h4>
-            <p class="entry-desc">A quiz application for creating and taking quizzes.</p>
+        <li class="work">
+          <span class="work-num" aria-hidden="true">11</span>
+          <div class="work-body">
+            <span class="work-kind web"><svg><use href="#icon-web" /></svg> Web app</span>
+            <h3 class="work-title">Quizbase</h3>
+            <p class="work-desc">A quiz application for creating and taking quizzes.</p>
             <ul class="tags"><li>Next.js</li><li>Supabase</li></ul>
           </div>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <span class="entry-icon web" aria-hidden="true"><svg><use href="#icon-web" /></svg></span>
-          <div class="entry-body">
-            <h4 class="entry-title plain">Expense Tracker</h4>
-            <p class="entry-desc">A personal expense-tracking web app covering accounts, transactions, credit cards, credit-score history, and event budgeting.</p>
+        <li class="work">
+          <span class="work-num" aria-hidden="true">12</span>
+          <div class="work-body">
+            <span class="work-kind web"><svg><use href="#icon-web" /></svg> Web app</span>
+            <h3 class="work-title">Expense Tracker</h3>
+            <p class="work-desc">A personal expense-tracking web app covering accounts, transactions, credit cards, credit-score history, and event budgeting.</p>
             <ul class="tags"><li>FastAPI</li><li>Supabase</li><li>Python</li></ul>
           </div>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <span class="entry-icon macos" aria-hidden="true"><svg><use href="#icon-macos" /></svg></span>
-          <div class="entry-body">
-            <h4 class="entry-title plain">Clip History</h4>
-            <p class="entry-desc">A native macOS menu-bar clipboard-history manager with global-hotkey popup and image support.</p>
+        <li class="work">
+          <span class="work-num" aria-hidden="true">13</span>
+          <div class="work-body">
+            <span class="work-kind macos"><svg><use href="#icon-macos" /></svg> macOS</span>
+            <h3 class="work-title">Clip History</h3>
+            <p class="work-desc">A native macOS menu-bar clipboard-history manager with global-hotkey popup and image support.</p>
             <ul class="tags"><li>macOS</li><li>Swift</li></ul>
           </div>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <span class="entry-icon doc" aria-hidden="true"><svg><use href="#icon-doc" /></svg></span>
-          <div class="entry-body">
-            <h4 class="entry-title plain">Letter Formatting</h4>
-            <p class="entry-desc">A set of HTML templates that render a bank-branded letterhead correctly through Appian&rsquo;s HTML-to-PDF service.</p>
+        <li class="work">
+          <span class="work-num" aria-hidden="true">14</span>
+          <div class="work-body">
+            <span class="work-kind doc"><svg><use href="#icon-doc" /></svg> Templates</span>
+            <h3 class="work-title">Letter Formatting</h3>
+            <p class="work-desc">A set of HTML templates that render a bank-branded letterhead correctly through Appian&rsquo;s HTML-to-PDF service.</p>
             <ul class="tags"><li>HTML</li><li>Appian</li><li>PDF</li></ul>
           </div>
         </li>
-
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <span class="entry-icon cli" aria-hidden="true"><svg><use href="#icon-cli" /></svg></span>
-          <div class="entry-body">
-            <h4 class="entry-title plain">Queries</h4>
-            <p class="entry-desc">A TypeScript project using the Claude Agent SDK to generate and run e-commerce database queries, including a Slack alert integration for overdue orders.</p>
+        <li class="work">
+          <span class="work-num" aria-hidden="true">15</span>
+          <div class="work-body">
+            <span class="work-kind cli"><svg><use href="#icon-cli" /></svg> Agent</span>
+            <h3 class="work-title">Queries</h3>
+            <p class="work-desc">A TypeScript project using the Claude Agent SDK to generate and run e-commerce database queries, including a Slack alert integration for overdue orders.</p>
             <ul class="tags"><li>TypeScript</li><li>Claude Agent SDK</li><li>Slack API</li></ul>
           </div>
         </li>
-      </ul>
-    </section>
+      </ol>
+    </div>
+  </section>
 
-    <!-- ---------- Education ---------- -->
-    <section id="education" class="section" aria-label="Education">
-      <h2 class="section-heading-mobile">Education</h2>
-      <ul class="entry-list">
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <p class="entry-years">2022</p>
-          <div class="entry-body">
-            <h4 class="entry-title plain">Master of Computer Applications</h4>
-            <p class="entry-meta">Lovely Professional University</p>
+  <!-- ================= EDUCATION ================= -->
+  <section class="band band-paper" id="education">
+    <div class="wrap">
+      <header class="band-head">
+        <p class="eyebrow">04 &mdash; Education</p>
+        <h2 class="band-title">Where it started.</h2>
+      </header>
+
+      <ul class="edu">
+        <li>
+          <span class="edu-year">2022</span>
+          <div>
+            <h3 class="edu-degree">Master of Computer Applications</h3>
+            <p class="edu-school">Lovely Professional University</p>
           </div>
         </li>
-        <li class="entry">
-          <div class="entry-bg" aria-hidden="true"></div>
-          <p class="entry-years">2019</p>
-          <div class="entry-body">
-            <h4 class="entry-title plain">B.Sc.</h4>
-            <p class="entry-meta">University of Jammu</p>
+        <li>
+          <span class="edu-year">2019</span>
+          <div>
+            <h3 class="edu-degree">B.Sc.</h3>
+            <p class="edu-school">University of Jammu</p>
           </div>
         </li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <footer class="site-footer">
-      <p>
-        Built by Ashok Kumar. Typeset in
-        <a href="https://rsms.me/inter/" target="_blank" rel="noopener">Inter</a> and
-        IBM Plex Mono, deployed on Vercel.
-      </p>
-    </footer>
+</main>
 
-  </main>
-</div>
+<!-- ================= FOOTER ================= -->
+<footer class="band band-ink site-footer">
+  <div class="wrap">
+    <p class="foot-eyebrow">Get in touch</p>
+    <h2 class="foot-title">Let&rsquo;s build something.</h2>
+    <div class="foot-links">
+      <a class="btn" href="https://www.linkedin.com/in/ashok-kumar-a9447587k/" target="_blank" rel="noopener">
+        <span>LinkedIn</span>
+        <svg class="btn-arrow" viewBox="0 0 40 8" aria-hidden="true">
+          <line x1="0" y1="4" x2="34" y2="4" stroke="currentColor" stroke-width="1.4" />
+          <path d="M30 0.5 L34 4 L30 7.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <a class="link-plain" href="https://community.appian.com/members/ashokk6660-261402" target="_blank" rel="noopener">Appian Community</a>
+    </div>
+    <p class="foot-fine">
+      &copy; 2026 Ashok Kumar &middot; Set in League Spartan &amp; Libre Baskerville
+    </p>
+  </div>
+</footer>
 
 <script src="app.js"></script>
 </body>

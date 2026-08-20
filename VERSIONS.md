@@ -5,14 +5,36 @@ restored or previewed at any time. Newest first.
 
 | Version | Name | Date | Tag |
 | --- | --- | --- | --- |
+| v3 | Editorial | 2026-08-21 | `v3-editorial-2026-08-21` |
 | v2 | Split Pane (Dark) | 2026-08-20 | `v2-split-pane-2026-08-20` |
 | v1 | Gradient Hero | 2026-08-20 | `v1-gradient-hero-2026-08-20` |
 
 ---
 
+## v3 — Editorial · 2026-08-21
+
+**Tag:** `v3-editorial-2026-08-21` · **Currently live**
+
+Full-screen hero plus alternating dark/light bands, inspired by
+[riccardozanutta.com](https://riccardozanutta.com/).
+
+- Typography carries the design: **League Spartan** (heavy geometric sans) for
+  headings paired with **Libre Baskerville** (serif, italic for subtitles).
+- Ink `#1c1d25` and paper `#f3f3f3` bands alternate; coral→orange gradient
+  (`#f9484a` → `#ff6f43`) for CTAs, eyebrows, and accents.
+- Hero: oversized name, serif-italic role, coral CTA with a sliding arrow, a
+  giant ghosted "AK" monogram, drifting pink geometric shapes, a fixed social
+  rail, and a scroll cue.
+- Fixed top bar goes solid past the hero; nav underlines the active section.
+- Certifications are a thumbnail grid with a coral "View" chip on hover;
+  solutions are numbered rows with outlined numerals and tech tags.
+- Content fades up as it scrolls into view (skipped for `prefers-reduced-motion`).
+
+Files: `index.html`, `styles.css`, `app.js`
+
 ## v2 — Split Pane (Dark) · 2026-08-20
 
-**Tag:** `v2-split-pane-2026-08-20` · **Currently live**
+**Tag:** `v2-split-pane-2026-08-20`
 
 Two-column layout inspired by [brittanychiang.com](https://brittanychiang.com/).
 

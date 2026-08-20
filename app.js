@@ -1,80 +1,97 @@
 (function () {
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- Cursor spotlight ---------- */
+  var topbar = document.getElementById("topbar");
+  var hero = document.querySelector(".hero");
+  var rail = document.querySelector(".rail");
 
-  var spotlight = document.getElementById("spotlight");
-  var finePointer = window.matchMedia("(pointer: fine)").matches;
+  /* ---------- Top bar: solid once past the hero ----------
+     The bar sits over the dark hero to start, so it only needs a
+     background once lighter content scrolls underneath it.          */
 
-  if (spotlight && finePointer && !reduceMotion) {
-    var pending = false;
-    var lastX = 0, lastY = 0;
-
-    window.addEventListener("mousemove", function (e) {
-      lastX = e.clientX;
-      lastY = e.clientY;
-      if (pending) return;
-      pending = true;
-      requestAnimationFrame(function () {
-        spotlight.style.setProperty("--x", lastX + "px");
-        spotlight.style.setProperty("--y", lastY + "px");
-        pending = false;
-      });
-    }, { passive: true });
-  } else if (spotlight) {
-    spotlight.style.display = "none";
+  function onScroll() {
+    if (!hero) return;
+    var past = window.scrollY > hero.offsetHeight - 120;
+    if (topbar) topbar.classList.toggle("is-stuck", past);
+    if (rail) rail.classList.toggle("on-dark", !past);
   }
 
-  /* ---------- Scroll-spy nav ---------- */
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+  onScroll();
 
-  var links = Array.prototype.slice.call(document.querySelectorAll(".nav-link"));
-  if (!links.length) return;
+  /* ---------- Active section in the top nav ---------- */
 
+  var links = Array.prototype.slice.call(document.querySelectorAll(".topnav a"));
   var sections = links
     .map(function (link) {
-      var id = link.getAttribute("href").slice(1);
-      var el = document.getElementById(id);
-      return el ? { id: id, el: el, link: link } : null;
+      var el = document.getElementById(link.getAttribute("href").slice(1));
+      return el ? { el: el, link: link } : null;
     })
     .filter(Boolean);
 
-  function setActive(id) {
+  function markActive() {
+    var line = window.innerHeight * 0.4;
+    var current = null;
     sections.forEach(function (s) {
-      s.link.classList.toggle("is-active", s.id === id);
+      if (s.el.getBoundingClientRect().top <= line) current = s;
     });
-  }
-
-  // The section crossing this line (upper third of the viewport) is "current".
-  // Higher than centre so short sections like About still get their turn.
-  function activeSection() {
-    var line = window.innerHeight * 0.35;
-
-    // At the bottom of the page the last section can never reach the line,
-    // so claim it explicitly.
-    var atBottom =
-      window.innerHeight + window.scrollY >= document.body.scrollHeight - 2;
-    if (atBottom) return sections[sections.length - 1].id;
-
-    var current = sections[0].id;
-    for (var i = 0; i < sections.length; i++) {
-      if (sections[i].el.getBoundingClientRect().top <= line) {
-        current = sections[i].id;
-      }
-    }
-    return current;
+    sections.forEach(function (s) {
+      s.link.classList.toggle("is-active", s === current);
+    });
   }
 
   var ticking = false;
-  function update() {
+  window.addEventListener("scroll", function () {
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(function () {
-      setActive(activeSection());
+      markActive();
       ticking = false;
     });
+  }, { passive: true });
+  markActive();
+
+  /* ---------- Reveal content as it enters the viewport ---------- */
+
+  var targets = document.querySelectorAll(
+    ".band-head, .about-grid, .cert-group, .cert, .work, .edu li, .foot-links, .foot-fine"
+  );
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    Array.prototype.forEach.call(targets, function (el) {
+      el.classList.add("reveal", "is-in");
+    });
+    return;
   }
 
-  window.addEventListener("scroll", update, { passive: true });
-  window.addEventListener("resize", update, { passive: true });
-  update();
+  Array.prototype.forEach.call(targets, function (el) {
+    el.classList.add("reveal");
+  });
+
+  var io = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        io.unobserve(entry.target);
+      });
+    },
+    // No negative bottom margin: anything sitting inside it at max scroll
+    // could never intersect, and would stay invisible for good.
+    { rootMargin: "0px 0px -40px 0px", threshold: 0.05 }
+  );
+
+  Array.prototype.forEach.call(targets, function (el) { io.observe(el); });
+
+  // Safety net: once the page is scrolled to the end, nothing may stay hidden.
+  window.addEventListener("scroll", function () {
+    if (window.innerHeight + window.scrollY < document.body.scrollHeight - 4) return;
+    Array.prototype.forEach.call(targets, function (el) {
+      if (!el.classList.contains("is-in")) {
+        el.classList.add("is-in");
+        io.unobserve(el);
+      }
+    });
+  }, { passive: true });
 })();
