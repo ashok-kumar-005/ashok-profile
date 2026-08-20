@@ -14,6 +14,19 @@
 
 <a class="skip-link" href="#about">Skip to content</a>
 
+<!-- Intro curtain: draws the monogram, then wipes away. Driven purely by CSS
+     so it still clears itself if the script never runs. -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <svg class="pre-mark" viewBox="0 0 96 70" fill="none" stroke="#fff" stroke-width="5"
+       stroke-linecap="round" stroke-linejoin="round">
+    <path pathLength="1" d="M8 62 L28 8 L48 62" />
+    <path pathLength="1" d="M16 46 L40 46" />
+    <path pathLength="1" d="M64 8 L64 62" />
+    <path pathLength="1" d="M88 8 L64 38" />
+    <path pathLength="1" d="M66 36 L90 62" />
+  </svg>
+</div>
+
 <svg aria-hidden="true" style="position:absolute; width:0; height:0; overflow:hidden;">
   <defs>
     <symbol id="icon-web" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
@@ -75,14 +88,30 @@
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
+  <div class="aurora" aria-hidden="true">
+    <span class="glow glow-1"></span>
+    <span class="glow glow-2"></span>
+    <span class="glow glow-3"></span>
+  </div>
+
+  <!-- Three depth layers, each parallaxed by a different amount -->
   <div class="shapes" aria-hidden="true">
-    <span class="shape shape-tri-a"></span>
-    <span class="shape shape-tri-b"></span>
-    <span class="shape shape-arc-a"></span>
-    <span class="shape shape-arc-b"></span>
-    <span class="shape shape-slash-a"></span>
-    <span class="shape shape-slash-b"></span>
-    <span class="shape shape-dot"></span>
+    <div class="layer layer-back">
+      <span class="shape shape-arc-a"></span>
+      <span class="shape shape-slash-a"></span>
+      <span class="shape shape-ring-a"></span>
+    </div>
+    <div class="layer layer-mid">
+      <span class="shape shape-tri-a"></span>
+      <span class="shape shape-arc-b"></span>
+      <span class="shape shape-dot"></span>
+      <span class="shape shape-sq-a"></span>
+    </div>
+    <div class="layer layer-front">
+      <span class="shape shape-tri-b"></span>
+      <span class="shape shape-slash-b"></span>
+      <span class="shape shape-plus"></span>
+    </div>
   </div>
 
   <span class="watermark" aria-hidden="true">AK</span>

@@ -22,9 +22,14 @@ Full-screen hero plus alternating dark/light bands, inspired by
   headings paired with **Libre Baskerville** (serif, italic for subtitles).
 - Ink `#1c1d25` and paper `#f3f3f3` bands alternate; coral→orange gradient
   (`#f9484a` → `#ff6f43`) for CTAs, eyebrows, and accents.
+- **Intro:** a full-screen curtain draws the "AK" monogram stroke by stroke,
+  wipes upward, and the hero staggers in behind it (~2s total). Pure CSS, so it
+  clears itself even if the script never runs.
 - Hero: oversized name, serif-italic role, coral CTA with a sliding arrow, a
-  giant ghosted "AK" monogram, drifting pink geometric shapes, a fixed social
-  rail, and a scroll cue.
+  giant ghosted "AK" monogram, a fixed social rail, and a scroll cue.
+- **Background motion:** three blurred aurora glows drift on long, offset loops,
+  and ten geometric shapes float and rotate across three depth layers that
+  parallax to the pointer.
 - Fixed top bar goes solid past the hero; nav underlines the active section.
 - Certifications are a thumbnail grid with a coral "View" chip on hover;
   solutions are numbered rows with outlined numerals and tech tags.

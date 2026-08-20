@@ -5,6 +5,48 @@
   var hero = document.querySelector(".hero");
   var rail = document.querySelector(".rail");
 
+  /* ---------- Intro curtain ----------
+     The CSS animation clears it on its own; this only tears the node out
+     afterwards, and force-clears it if the animation never ran at all so the
+     page can never be left sitting behind a curtain.                       */
+
+  var preloader = document.getElementById("preloader");
+  if (preloader) {
+    var drop = function () {
+      if (preloader && preloader.parentNode) preloader.parentNode.removeChild(preloader);
+      preloader = null;
+    };
+    if (reduceMotion) drop();
+    else {
+      preloader.addEventListener("animationend", function (e) {
+        if (e.animationName === "curtain") drop();
+      });
+      setTimeout(drop, 3000);
+    }
+  }
+
+  /* ---------- Pointer parallax on the hero shape layers ---------- */
+
+  var shapes = document.querySelector(".shapes");
+  var finePointer = window.matchMedia("(pointer: fine)").matches;
+
+  if (shapes && hero && finePointer && !reduceMotion) {
+    var queued = false, px = 0, py = 0;
+
+    window.addEventListener("mousemove", function (e) {
+      // -1 .. 1 relative to the middle of the viewport
+      px = (e.clientX / window.innerWidth - 0.5) * -2;
+      py = (e.clientY / window.innerHeight - 0.5) * -2;
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(function () {
+        shapes.style.setProperty("--par-x", px.toFixed(3));
+        shapes.style.setProperty("--par-y", py.toFixed(3));
+        queued = false;
+      });
+    }, { passive: true });
+  }
+
   /* ---------- Top bar: solid once past the hero ----------
      The bar sits over the dark hero to start, so it only needs a
      background once lighter content scrolls underneath it.          */
