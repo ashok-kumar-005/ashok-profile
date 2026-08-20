@@ -3,14 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ashok Kumar — Credentials</title>
-<meta name="description" content="Ashok Kumar — Appian developer and AI practitioner. Certifications in Appian, Claude/Anthropic, and applied AI." />
+<title>Ashok Kumar — Appian Developer &amp; AI Practitioner</title>
+<meta name="description" content="Ashok Kumar — Appian developer and AI practitioner. Certifications in Appian, Claude/Anthropic, and applied AI, plus solutions built with Claude." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+<a class="skip-link" href="#content">Skip to content</a>
+
+<div id="spotlight" aria-hidden="true"></div>
 
 <svg aria-hidden="true" style="position:absolute; width:0; height:0; overflow:hidden;">
   <defs>
@@ -46,310 +50,613 @@
       <line x1="8.5" y1="12" x2="15.5" y2="12" />
       <line x1="8.5" y1="16" x2="15.5" y2="16" />
     </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
+    </symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9.5" />
+      <line x1="2.5" y1="12" x2="21.5" y2="12" />
+      <path d="M12 2.5a14.5 14.5 0 0 1 0 19 14.5 14.5 0 0 1 0-19z" />
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06z" clip-rule="evenodd" />
+    </symbol>
   </defs>
 </svg>
 
-<header class="hero">
-  <canvas id="bg-flow" aria-hidden="true"></canvas>
-  <div class="hero-inner">
-  <p class="eyebrow">Credential Network</p>
-  <h1>Ashok Kumar</h1>
-  <p class="tagline">Appian Developer &middot; AI Practitioner</p>
-  <p class="bio">
-    I have 5+ years of experience building enterprise workflow applications
-    on Appian, backed by Associate and Senior Developer certifications. Alongside
-    that, I&rsquo;m an active AI/Claude practitioner &mdash; certified across
-    Anthropic&rsquo;s Claude ecosystem and building practical AI solutions with
-    Claude in my own projects. This page is the record of both.
-  </p>
-  <nav class="links">
-    <a class="link-btn" href="https://www.linkedin.com/in/ashok-kumar-a9447587k/" target="_blank" rel="noopener">LinkedIn ↗</a>
-    <a class="link-btn" href="https://community.appian.com/members/ashokk6660-261402" target="_blank" rel="noopener">Appian Community ↗</a>
-  </nav>
-  </div>
-</header>
+<div class="layout">
 
-<main>
-  <section class="group" id="appian">
-    <h2 class="group-title">Appian</h2>
-    <div class="grid">
-      <article class="card">
-        <a class="thumb" href="assets/appian-senior.png" target="_blank" rel="noopener">
-          <img src="assets/appian-senior.png" alt="Appian Certified Senior Developer certificate" loading="lazy" />
-        </a>
-        <h3>Appian Certified Senior Developer</h3>
-        <p class="issuer">Appian Academy</p>
-        <p class="meta">Awarded Nov 2024 &middot; Valid through May 2026</p>
-      </article>
+  <!-- ============ STICKY LEFT PANE ============ -->
+  <header class="pane-left">
+    <div class="pane-left-top">
+      <h1 class="name"><a href="/">Ashok Kumar</a></h1>
+      <h2 class="role">Appian Developer &amp; AI Practitioner</h2>
+      <p class="lede">
+        I build enterprise workflow applications on Appian and practical
+        AI solutions with Claude.
+      </p>
 
-      <article class="card">
-        <a class="thumb" href="assets/appian-associate.png" target="_blank" rel="noopener">
-          <img src="assets/appian-associate.png" alt="Appian Certified Associate Developer certificate" loading="lazy" />
-        </a>
-        <h3>Appian Certified Associate Developer</h3>
-        <p class="issuer">Appian Academy</p>
-        <p class="meta">Awarded Jul 2022</p>
-      </article>
+      <nav class="nav" aria-label="In-page jump links">
+        <ul>
+          <li><a class="nav-link" href="#about"><span class="nav-line"></span><span class="nav-text">About</span></a></li>
+          <li><a class="nav-link" href="#certifications"><span class="nav-line"></span><span class="nav-text">Certifications</span></a></li>
+          <li><a class="nav-link" href="#solutions"><span class="nav-line"></span><span class="nav-text">Solutions</span></a></li>
+          <li><a class="nav-link" href="#education"><span class="nav-line"></span><span class="nav-text">Education</span></a></li>
+        </ul>
+      </nav>
     </div>
-  </section>
 
-  <section class="group" id="ai-claude">
-    <h2 class="group-title">AI &amp; Claude</h2>
-    <div class="grid">
-      <article class="card">
-        <a class="thumb" href="assets/claude-associate.png" target="_blank" rel="noopener">
-          <img src="assets/claude-associate.png" alt="Claude Certified Associate - Foundations certificate" loading="lazy" />
-        </a>
-        <h3>Claude Certified Associate — Foundations</h3>
-        <p class="issuer">Anthropic</p>
-        <p class="meta">Issued Aug 2026 &middot; Expires Aug 2027</p>
-        <a class="verify" href="https://www.credly.com/badges/916d6f1f-ab98-4e6d-8abf-058e4a17902e" target="_blank" rel="noopener">Verify on Credly ↗</a>
-      </article>
-
-      <article class="card">
-        <a class="thumb" href="assets/xebia-xai.jpeg" target="_blank" rel="noopener">
-          <img src="assets/xebia-xai.jpeg" alt="Certified X-AI Practitioner certificate" loading="lazy" />
-        </a>
-        <h3>Certified X-AI Practitioner</h3>
-        <p class="issuer">Xebia &mdash; Foundational AI</p>
-        <p class="meta">Issued Dec 2025</p>
-      </article>
-
-      <article class="card">
-        <a class="thumb" href="assets/ai-fluency-framework.png" target="_blank" rel="noopener">
-          <img src="assets/ai-fluency-framework.png" alt="AI Fluency: Framework and Foundations certificate" loading="lazy" />
-        </a>
-        <h3>AI Fluency: Framework &amp; Foundations</h3>
-        <p class="issuer">Anthropic</p>
-        <p class="meta">Certificate of completion</p>
-      </article>
-
-      <article class="card">
-        <a class="thumb" href="assets/ai-fluency-capabilities.png" target="_blank" rel="noopener">
-          <img src="assets/ai-fluency-capabilities.png" alt="AI Fluency: AI Capabilities and Limitations certificate" loading="lazy" />
-        </a>
-        <h3>AI Fluency: AI Capabilities &amp; Limitations</h3>
-        <p class="issuer">Anthropic</p>
-        <p class="meta">Certificate of completion</p>
-      </article>
-
-      <article class="card">
-        <a class="thumb" href="assets/claude-code-101.png" target="_blank" rel="noopener">
-          <img src="assets/claude-code-101.png" alt="Claude Code 101 certificate" loading="lazy" />
-        </a>
-        <h3>Claude Code 101</h3>
-        <p class="issuer">Anthropic</p>
-        <p class="meta">Certificate of completion</p>
-      </article>
-
-      <article class="card">
-        <a class="thumb" href="assets/claude-101.png" target="_blank" rel="noopener">
-          <img src="assets/claude-101.png" alt="Claude 101 certificate" loading="lazy" />
-        </a>
-        <h3>Claude 101</h3>
-        <p class="issuer">Anthropic</p>
-        <p class="meta">Certificate of completion</p>
-      </article>
-
-      <article class="card">
-        <a class="thumb" href="assets/mcp-intro.png" target="_blank" rel="noopener">
-          <img src="assets/mcp-intro.png" alt="Introduction to Model Context Protocol certificate" loading="lazy" />
-        </a>
-        <h3>Introduction to Model Context Protocol</h3>
-        <p class="issuer">Anthropic</p>
-        <p class="meta">Certificate of completion</p>
-      </article>
-
-      <article class="card">
-        <a class="thumb" href="assets/prompt-engineering.jpeg" target="_blank" rel="noopener">
-          <img src="assets/prompt-engineering.jpeg" alt="Prompt Engineering course certificate" loading="lazy" />
-        </a>
-        <h3>Prompt Engineering</h3>
-        <p class="issuer">Sololearn</p>
-        <p class="meta">Completed Oct 2025</p>
-      </article>
-
-      <article class="card">
-        <a class="thumb" href="assets/ml-beginners.jpeg" target="_blank" rel="noopener">
-          <img src="assets/ml-beginners.jpeg" alt="Machine Learning for Beginners course certificate" loading="lazy" />
-        </a>
-        <h3>Machine Learning for Beginners</h3>
-        <p class="issuer">Sololearn</p>
-        <p class="meta">Completed Oct 2025</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="group" id="other">
-    <h2 class="group-title">Other</h2>
-    <div class="grid">
-      <article class="card">
-        <a class="thumb" href="assets/uiux-beginners.png" target="_blank" rel="noopener">
-          <img src="assets/uiux-beginners.png" alt="UI/UX for Beginners certificate" loading="lazy" />
-        </a>
-        <h3>UI/UX for Beginners</h3>
-        <p class="issuer">Great Learning Academy</p>
-        <p class="meta">Completed May 2024</p>
-      </article>
-
-      <article class="card">
-        <a class="thumb" href="assets/cyber-security-ethical-hacking.jpeg" target="_blank" rel="noopener">
-          <img src="assets/cyber-security-ethical-hacking.jpeg" alt="Cyber Security and Ethical Hacking certificate" loading="lazy" />
-        </a>
-        <h3>Cyber Security and Ethical Hacking</h3>
-        <p class="issuer">Board Infinity</p>
-        <p class="meta">Completed Jul 2021</p>
-      </article>
-
-      <article class="card">
-        <a class="thumb" href="assets/bug-bounties-bootcamp.jpeg" target="_blank" rel="noopener">
-          <img src="assets/bug-bounties-bootcamp.jpeg" alt="Broad Scope Bug Bounties From Scratch certificate" loading="lazy" />
-        </a>
-        <h3>Broad Scope Bug Bounties From Scratch</h3>
-        <p class="issuer">Udemy</p>
-        <p class="meta">Completed Jun 2021</p>
-      </article>
-
-      <article class="card">
-        <a class="thumb" href="assets/wireshark-course.jpeg" target="_blank" rel="noopener">
-          <img src="assets/wireshark-course.jpeg" alt="The Complete Wireshark Course certificate" loading="lazy" />
-        </a>
-        <h3>The Complete Wireshark Course</h3>
-        <p class="issuer">Udemy</p>
-        <p class="meta">Completed Jan 2021</p>
-      </article>
-
-      <article class="card">
-        <a class="thumb" href="assets/cisco-packet-tracer.jpeg" target="_blank" rel="noopener">
-          <img src="assets/cisco-packet-tracer.jpeg" alt="Introduction to Packet Tracer certificate" loading="lazy" />
-        </a>
-        <h3>Introduction to Packet Tracer</h3>
-        <p class="issuer">Cisco Networking Academy</p>
-        <p class="meta">Completed Jan 2021</p>
-      </article>
-
-      <article class="card">
-        <a class="thumb" href="assets/python-bootcamp.jpeg" target="_blank" rel="noopener">
-          <img src="assets/python-bootcamp.jpeg" alt="2020 Complete Python Bootcamp certificate" loading="lazy" />
-        </a>
-        <h3>2020 Complete Python Bootcamp: Zero to Hero</h3>
-        <p class="issuer">Udemy</p>
-        <p class="meta">Completed Aug 2020</p>
-      </article>
-
-      <article class="card">
-        <a class="thumb" href="assets/vtf-internship-badge.png" target="_blank" rel="noopener">
-          <img src="assets/vtf-internship-badge.png" alt="Virtually Testing Foundation Beginner Track Internship badge" loading="lazy" />
-        </a>
-        <h3>Beginner Track Internship</h3>
-        <p class="issuer">Virtually Testing Foundation</p>
-        <p class="meta">Jan &ndash; Mar 2021</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="group" id="solutions">
-    <h2 class="group-title">Solutions Built with Claude</h2>
-    <ul class="solutions-list">
-      <li class="solution-card">
-        <span class="solution-icon ml" title="ML pipeline"><svg><use href="#icon-ml" /></svg></span>
-        <h3>Capstone: Smart Billing &amp; Premium Intelligence</h3>
-        <p>A Python ML pipeline that predicts which insurance customers are at risk of lapsing and automates tailored retention outreach through an Appian-based dashboard.</p>
-      </li>
-      <li class="solution-card">
-        <span class="solution-icon web" title="Web app"><svg><use href="#icon-web" /></svg></span>
-        <h3>Video Downloader</h3>
-        <p>A Next.js web app for downloading YouTube, Instagram, and Facebook videos as MP4 or MP3, with a multi-tier extraction fallback.</p>
-      </li>
-      <li class="solution-card">
-        <span class="solution-icon cli" title="CLI project"><svg><use href="#icon-cli" /></svg></span>
-        <h3>MCP Chat (CLI Project)</h3>
-        <p>A Python command-line chat client for the Anthropic API with document retrieval, slash-command prompts, and pluggable MCP tools.</p>
-      </li>
-      <li class="solution-card">
-        <span class="solution-icon ios" title="iOS app"><svg><use href="#icon-ios" /></svg></span>
-        <h3>LudoPlay</h3>
-        <p>A native SwiftUI iOS Ludo board game with offline single-player and pass-and-play modes.</p>
-      </li>
-      <li class="solution-card">
-        <span class="solution-icon web" title="Web app"><svg><use href="#icon-web" /></svg></span>
-        <h3>Steno</h3>
-        <p>A dictation-practice web app where users transcribe audio and get word-by-word accuracy feedback, built with FastAPI and Supabase.</p>
-      </li>
-      <li class="solution-card">
-        <span class="solution-icon ios" title="iOS app"><svg><use href="#icon-ios" /></svg></span>
-        <h3>Clip History Mobile</h3>
-        <p>A companion iOS app that captures copied text and photos on iPhone and relays them to the Mac Clip History app via Google Drive.</p>
-      </li>
-      <li class="solution-card">
-        <span class="solution-icon web" title="Progressive web app"><svg><use href="#icon-web" /></svg></span>
-        <h3>Ironlog</h3>
-        <p>A gym-workout-tracking progressive web app for logging sets, tracking PRs, and viewing exercise demo videos, with offline support.</p>
-      </li>
-      <li class="solution-card">
-        <span class="solution-icon ios" title="iOS app"><svg><use href="#icon-ios" /></svg></span>
-        <h3>CountDown Widget</h3>
-        <p>An iOS app with a home-screen widget extension for a countdown timer.</p>
-      </li>
-      <li class="solution-card">
-        <span class="solution-icon web" title="Progressive web app"><svg><use href="#icon-web" /></svg></span>
-        <h3>Chess Analytics</h3>
-        <p>A browser-only PWA that pulls a user&rsquo;s chess.com game history and analyzes it, backed by Supabase.</p>
-      </li>
-      <li class="solution-card">
-        <span class="solution-icon web" title="Web app"><svg><use href="#icon-web" /></svg></span>
-        <h3>UIGen</h3>
-        <p>An AI-powered React component generator with live preview, built on Next.js and the Anthropic API.</p>
-      </li>
-      <li class="solution-card">
-        <span class="solution-icon web" title="Web app"><svg><use href="#icon-web" /></svg></span>
-        <h3>Quizbase</h3>
-        <p>A Next.js and Supabase quiz application for creating and taking quizzes.</p>
-      </li>
-      <li class="solution-card">
-        <span class="solution-icon web" title="Web app"><svg><use href="#icon-web" /></svg></span>
-        <h3>Expense Tracker</h3>
-        <p>A personal expense-tracking web app covering accounts, transactions, credit cards, credit-score history, and event budgeting, built with FastAPI and Supabase.</p>
-      </li>
-      <li class="solution-card">
-        <span class="solution-icon macos" title="macOS app"><svg><use href="#icon-macos" /></svg></span>
-        <h3>Clip History</h3>
-        <p>A native macOS menu-bar clipboard-history manager with global-hotkey popup and image support.</p>
-      </li>
-      <li class="solution-card">
-        <span class="solution-icon doc" title="Document templates"><svg><use href="#icon-doc" /></svg></span>
-        <h3>Letter Formatting</h3>
-        <p>A set of HTML templates that render a bank-branded letterhead correctly through Appian&rsquo;s HTML-to-PDF service.</p>
-      </li>
-      <li class="solution-card">
-        <span class="solution-icon cli" title="CLI / agent project"><svg><use href="#icon-cli" /></svg></span>
-        <h3>Queries</h3>
-        <p>A TypeScript project using the Claude Agent SDK to generate and run e-commerce database queries, including a Slack alert integration for overdue orders.</p>
-      </li>
-    </ul>
-  </section>
-
-  <section class="education">
-    <h2 class="group-title">Education</h2>
-    <ul class="edu-list">
+    <ul class="socials" aria-label="Profile links">
       <li>
-        <span class="edu-degree">Master of Computer Applications</span>
-        <span class="edu-school">Lovely Professional University</span>
-        <span class="edu-year">2022</span>
+        <a href="https://www.linkedin.com/in/ashok-kumar-a9447587k/" target="_blank" rel="noopener" aria-label="LinkedIn (opens in a new tab)" title="LinkedIn">
+          <svg><use href="#icon-linkedin" /></svg>
+        </a>
       </li>
       <li>
-        <span class="edu-degree">B.Sc.</span>
-        <span class="edu-school">University of Jammu</span>
-        <span class="edu-year">2019</span>
+        <a href="https://community.appian.com/members/ashokk6660-261402" target="_blank" rel="noopener" aria-label="Appian Community profile (opens in a new tab)" title="Appian Community">
+          <svg><use href="#icon-globe" /></svg>
+        </a>
       </li>
     </ul>
-  </section>
-</main>
+  </header>
 
-<footer class="site-footer">
-  <p>&copy; 2026 Ashok Kumar &middot; <a href="https://www.linkedin.com/in/ashok-kumar-a9447587k/" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="https://community.appian.com/members/ashokk6660-261402" target="_blank" rel="noopener">Appian Community</a></p>
-</footer>
+  <!-- ============ SCROLLING RIGHT PANE ============ -->
+  <main class="pane-right" id="content">
 
-<script src="bg-flow.js"></script>
+    <!-- ---------- About ---------- -->
+    <section id="about" class="section" aria-label="About">
+      <h2 class="section-heading-mobile">About</h2>
+      <div class="prose">
+        <p>
+          I have <strong>5+ years of experience</strong> building enterprise workflow
+          applications on Appian, backed by Associate and Senior Developer
+          certifications from Appian Academy.
+        </p>
+        <p>
+          Alongside that, I&rsquo;m an active AI practitioner &mdash; certified across
+          <strong>Anthropic&rsquo;s Claude ecosystem</strong> and building practical AI
+          solutions with Claude across web, iOS, macOS, and CLI projects.
+        </p>
+        <p>
+          This page is the record of both: the credentials I&rsquo;ve earned and the
+          things I&rsquo;ve actually shipped with them.
+        </p>
+      </div>
+    </section>
+
+    <!-- ---------- Certifications ---------- -->
+    <section id="certifications" class="section" aria-label="Certifications">
+      <h2 class="section-heading-mobile">Certifications</h2>
+
+      <h3 class="group-label">Appian</h3>
+      <ul class="entry-list">
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/appian-senior.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/appian-senior.png" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/appian-senior.png" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                Appian Certified Senior Developer
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Appian Academy</p>
+            <p class="entry-date">Awarded Nov 2024 &middot; Valid through May 2026</p>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/appian-associate.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/appian-associate.png" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/appian-associate.png" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                Appian Certified Associate Developer
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Appian Academy</p>
+            <p class="entry-date">Awarded Jul 2022</p>
+          </div>
+        </li>
+      </ul>
+
+      <h3 class="group-label">AI &amp; Claude</h3>
+      <ul class="entry-list">
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/claude-associate.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/claude-associate.png" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/claude-associate.png" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                Claude Certified Associate &mdash; Foundations
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Anthropic</p>
+            <p class="entry-date">Issued Aug 2026 &middot; Expires Aug 2027</p>
+            <p class="entry-verify">
+              <a href="https://www.credly.com/badges/916d6f1f-ab98-4e6d-8abf-058e4a17902e" target="_blank" rel="noopener">Verify on Credly</a>
+            </p>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/xebia-xai.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/xebia-xai.jpeg" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/xebia-xai.jpeg" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                Certified X-AI Practitioner
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Xebia &mdash; Foundational AI</p>
+            <p class="entry-date">Issued Dec 2025</p>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/ai-fluency-framework.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/ai-fluency-framework.png" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/ai-fluency-framework.png" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                AI Fluency: Framework &amp; Foundations
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Anthropic</p>
+            <p class="entry-date">Certificate of completion</p>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/ai-fluency-capabilities.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/ai-fluency-capabilities.png" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/ai-fluency-capabilities.png" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                AI Fluency: AI Capabilities &amp; Limitations
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Anthropic</p>
+            <p class="entry-date">Certificate of completion</p>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/claude-code-101.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/claude-code-101.png" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/claude-code-101.png" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                Claude Code 101
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Anthropic</p>
+            <p class="entry-date">Certificate of completion</p>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/claude-101.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/claude-101.png" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/claude-101.png" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                Claude 101
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Anthropic</p>
+            <p class="entry-date">Certificate of completion</p>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/mcp-intro.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/mcp-intro.png" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/mcp-intro.png" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                Introduction to Model Context Protocol
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Anthropic</p>
+            <p class="entry-date">Certificate of completion</p>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/prompt-engineering.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/prompt-engineering.jpeg" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/prompt-engineering.jpeg" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                Prompt Engineering
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Sololearn</p>
+            <p class="entry-date">Completed Oct 2025</p>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/ml-beginners.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/ml-beginners.jpeg" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/ml-beginners.jpeg" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                Machine Learning for Beginners
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Sololearn</p>
+            <p class="entry-date">Completed Oct 2025</p>
+          </div>
+        </li>
+      </ul>
+
+      <h3 class="group-label">Security, Networking &amp; Foundations</h3>
+      <ul class="entry-list">
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/uiux-beginners.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/uiux-beginners.png" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/uiux-beginners.png" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                UI/UX for Beginners
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Great Learning Academy</p>
+            <p class="entry-date">Completed May 2024</p>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/cyber-security-ethical-hacking.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/cyber-security-ethical-hacking.jpeg" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/cyber-security-ethical-hacking.jpeg" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                Cyber Security and Ethical Hacking
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Board Infinity</p>
+            <p class="entry-date">Completed Jul 2021</p>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/bug-bounties-bootcamp.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/bug-bounties-bootcamp.jpeg" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/bug-bounties-bootcamp.jpeg" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                Broad Scope Bug Bounties From Scratch
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Udemy</p>
+            <p class="entry-date">Completed Jun 2021</p>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/wireshark-course.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/wireshark-course.jpeg" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/wireshark-course.jpeg" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                The Complete Wireshark Course
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Udemy</p>
+            <p class="entry-date">Completed Jan 2021</p>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/cisco-packet-tracer.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/cisco-packet-tracer.jpeg" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/cisco-packet-tracer.jpeg" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                Introduction to Packet Tracer
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Cisco Networking Academy</p>
+            <p class="entry-date">Completed Jan 2021</p>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/python-bootcamp.jpeg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/python-bootcamp.jpeg" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/python-bootcamp.jpeg" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                2020 Complete Python Bootcamp: Zero to Hero
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Udemy</p>
+            <p class="entry-date">Completed Aug 2020</p>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <a class="entry-thumb" href="assets/vtf-internship-badge.png" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/vtf-internship-badge.png" alt="" loading="lazy" />
+          </a>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              <a href="assets/vtf-internship-badge.png" target="_blank" rel="noopener">
+                <span class="entry-link-cover"></span>
+                Beginner Track Internship
+                <svg class="entry-arrow"><use href="#icon-arrow" /></svg>
+              </a>
+            </h4>
+            <p class="entry-meta">Virtually Testing Foundation</p>
+            <p class="entry-date">Jan &ndash; Mar 2021</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ---------- Solutions ---------- -->
+    <section id="solutions" class="section" aria-label="Solutions built with Claude">
+      <h2 class="section-heading-mobile">Solutions</h2>
+      <p class="section-intro">Things I&rsquo;ve designed and shipped with Claude.</p>
+
+      <ul class="entry-list">
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <span class="entry-icon ml" aria-hidden="true"><svg><use href="#icon-ml" /></svg></span>
+          <div class="entry-body">
+            <h4 class="entry-title plain">Capstone: Smart Billing &amp; Premium Intelligence</h4>
+            <p class="entry-desc">A Python ML pipeline that predicts which insurance customers are at risk of lapsing and automates tailored retention outreach through an Appian-based dashboard.</p>
+            <ul class="tags"><li>Python</li><li>Machine Learning</li><li>Appian</li></ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <span class="entry-icon web" aria-hidden="true"><svg><use href="#icon-web" /></svg></span>
+          <div class="entry-body">
+            <h4 class="entry-title plain">Video Downloader</h4>
+            <p class="entry-desc">A Next.js web app for downloading YouTube, Instagram, and Facebook videos as MP4 or MP3, with a multi-tier extraction fallback.</p>
+            <ul class="tags"><li>Next.js</li><li>React</li></ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <span class="entry-icon cli" aria-hidden="true"><svg><use href="#icon-cli" /></svg></span>
+          <div class="entry-body">
+            <h4 class="entry-title plain">MCP Chat</h4>
+            <p class="entry-desc">A Python command-line chat client for the Anthropic API with document retrieval, slash-command prompts, and pluggable MCP tools.</p>
+            <ul class="tags"><li>Python</li><li>Anthropic API</li><li>MCP</li></ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <span class="entry-icon ios" aria-hidden="true"><svg><use href="#icon-ios" /></svg></span>
+          <div class="entry-body">
+            <h4 class="entry-title plain">LudoPlay</h4>
+            <p class="entry-desc">A native SwiftUI iOS Ludo board game with offline single-player and pass-and-play modes.</p>
+            <ul class="tags"><li>SwiftUI</li><li>iOS</li></ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <span class="entry-icon web" aria-hidden="true"><svg><use href="#icon-web" /></svg></span>
+          <div class="entry-body">
+            <h4 class="entry-title plain">Steno</h4>
+            <p class="entry-desc">A dictation-practice web app where users transcribe audio and get word-by-word accuracy feedback.</p>
+            <ul class="tags"><li>FastAPI</li><li>Supabase</li><li>Python</li></ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <span class="entry-icon ios" aria-hidden="true"><svg><use href="#icon-ios" /></svg></span>
+          <div class="entry-body">
+            <h4 class="entry-title plain">Clip History Mobile</h4>
+            <p class="entry-desc">A companion iOS app that captures copied text and photos on iPhone and relays them to the Mac Clip History app via Google Drive.</p>
+            <ul class="tags"><li>iOS</li><li>Swift</li><li>Google Drive API</li></ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <span class="entry-icon web" aria-hidden="true"><svg><use href="#icon-web" /></svg></span>
+          <div class="entry-body">
+            <h4 class="entry-title plain">Ironlog</h4>
+            <p class="entry-desc">A gym-workout-tracking progressive web app for logging sets, tracking PRs, and viewing exercise demo videos, with offline support.</p>
+            <ul class="tags"><li>PWA</li><li>Offline-first</li></ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <span class="entry-icon ios" aria-hidden="true"><svg><use href="#icon-ios" /></svg></span>
+          <div class="entry-body">
+            <h4 class="entry-title plain">CountDown Widget</h4>
+            <p class="entry-desc">An iOS app with a home-screen widget extension for a countdown timer.</p>
+            <ul class="tags"><li>iOS</li><li>WidgetKit</li></ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <span class="entry-icon web" aria-hidden="true"><svg><use href="#icon-web" /></svg></span>
+          <div class="entry-body">
+            <h4 class="entry-title plain">Chess Analytics</h4>
+            <p class="entry-desc">A browser-only PWA that pulls a user&rsquo;s chess.com game history and analyzes it.</p>
+            <ul class="tags"><li>PWA</li><li>Supabase</li><li>chess.com API</li></ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <span class="entry-icon web" aria-hidden="true"><svg><use href="#icon-web" /></svg></span>
+          <div class="entry-body">
+            <h4 class="entry-title plain">UIGen</h4>
+            <p class="entry-desc">An AI-powered React component generator with live preview.</p>
+            <ul class="tags"><li>Next.js</li><li>Anthropic API</li><li>React</li></ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <span class="entry-icon web" aria-hidden="true"><svg><use href="#icon-web" /></svg></span>
+          <div class="entry-body">
+            <h4 class="entry-title plain">Quizbase</h4>
+            <p class="entry-desc">A quiz application for creating and taking quizzes.</p>
+            <ul class="tags"><li>Next.js</li><li>Supabase</li></ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <span class="entry-icon web" aria-hidden="true"><svg><use href="#icon-web" /></svg></span>
+          <div class="entry-body">
+            <h4 class="entry-title plain">Expense Tracker</h4>
+            <p class="entry-desc">A personal expense-tracking web app covering accounts, transactions, credit cards, credit-score history, and event budgeting.</p>
+            <ul class="tags"><li>FastAPI</li><li>Supabase</li><li>Python</li></ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <span class="entry-icon macos" aria-hidden="true"><svg><use href="#icon-macos" /></svg></span>
+          <div class="entry-body">
+            <h4 class="entry-title plain">Clip History</h4>
+            <p class="entry-desc">A native macOS menu-bar clipboard-history manager with global-hotkey popup and image support.</p>
+            <ul class="tags"><li>macOS</li><li>Swift</li></ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <span class="entry-icon doc" aria-hidden="true"><svg><use href="#icon-doc" /></svg></span>
+          <div class="entry-body">
+            <h4 class="entry-title plain">Letter Formatting</h4>
+            <p class="entry-desc">A set of HTML templates that render a bank-branded letterhead correctly through Appian&rsquo;s HTML-to-PDF service.</p>
+            <ul class="tags"><li>HTML</li><li>Appian</li><li>PDF</li></ul>
+          </div>
+        </li>
+
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <span class="entry-icon cli" aria-hidden="true"><svg><use href="#icon-cli" /></svg></span>
+          <div class="entry-body">
+            <h4 class="entry-title plain">Queries</h4>
+            <p class="entry-desc">A TypeScript project using the Claude Agent SDK to generate and run e-commerce database queries, including a Slack alert integration for overdue orders.</p>
+            <ul class="tags"><li>TypeScript</li><li>Claude Agent SDK</li><li>Slack API</li></ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ---------- Education ---------- -->
+    <section id="education" class="section" aria-label="Education">
+      <h2 class="section-heading-mobile">Education</h2>
+      <ul class="entry-list">
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <p class="entry-years">2022</p>
+          <div class="entry-body">
+            <h4 class="entry-title plain">Master of Computer Applications</h4>
+            <p class="entry-meta">Lovely Professional University</p>
+          </div>
+        </li>
+        <li class="entry">
+          <div class="entry-bg" aria-hidden="true"></div>
+          <p class="entry-years">2019</p>
+          <div class="entry-body">
+            <h4 class="entry-title plain">B.Sc.</h4>
+            <p class="entry-meta">University of Jammu</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="site-footer">
+      <p>
+        Built by Ashok Kumar. Typeset in
+        <a href="https://rsms.me/inter/" target="_blank" rel="noopener">Inter</a> and
+        IBM Plex Mono, deployed on Vercel.
+      </p>
+    </footer>
+
+  </main>
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
