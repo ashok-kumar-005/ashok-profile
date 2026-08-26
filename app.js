@@ -285,6 +285,150 @@
   }, { passive: true });
   markActive();
 
+  /* ---------- Solution screenshots ----------
+     Filenames are discovered, not listed: for a row tagged
+     data-shots="09-chess-analytics" this probes
+     assets/shots/09-chess-analytics-1.jpg, -2, -3 ... and stops at the first
+     number that has neither a .jpg nor a .png. Dropping 09-chess-analytics-5.jpg
+     into assets/shots/ is therefore the whole job — no code change. A project
+     with no files at all adds no markup, so its row stays exactly as it was. */
+
+  var SHOT_DIR = "assets/shots/";
+  var SHOT_EXT = ["jpg", "png", "jpeg", "webp"];
+  var SHOT_MAX = 12; // hard stop, so a missing file can never loop forever
+
+  // Resolves to the first extension that loads, or null if none do.
+  function findShot(slug, n) {
+    return new Promise(function (resolve) {
+      var i = 0;
+      (function tryNext() {
+        if (i >= SHOT_EXT.length) return resolve(null);
+        var url = SHOT_DIR + slug + "-" + n + "." + SHOT_EXT[i++];
+        var probe = new Image();
+        probe.onload = function () { resolve(url); };
+        probe.onerror = tryNext;
+        probe.src = url;
+      })();
+    });
+  }
+
+  // Walks 1..SHOT_MAX and stops at the first gap.
+  function collectShots(slug) {
+    var found = [];
+    return new Promise(function (resolve) {
+      (function step(n) {
+        if (n > SHOT_MAX) return resolve(found);
+        findShot(slug, n).then(function (url) {
+          if (!url) return resolve(found);
+          found.push(url);
+          step(n + 1);
+        });
+      })(1);
+    });
+  }
+
+  var viewer = document.getElementById("shot-viewer");
+  var works = document.querySelectorAll(".work[data-shots]");
+
+  if (viewer && works.length && "Promise" in window) {
+    var vImg = viewer.querySelector(".shot-full");
+    var vProject = viewer.querySelector(".shot-project");
+    var vCount = viewer.querySelector(".shot-count");
+    var vPrev = viewer.querySelector(".shot-prev");
+    var vNext = viewer.querySelector(".shot-next");
+
+    var group = [];   // urls of the project currently open
+    var title = "";
+    var index = 0;
+    var lastFocus = null;
+
+    function render() {
+      vImg.src = group[index];
+      vImg.alt = title + " screenshot " + (index + 1) + " of " + group.length;
+      vProject.textContent = title;
+      vCount.textContent = (index + 1) + " / " + group.length;
+      viewer.classList.toggle("is-single", group.length < 2);
+    }
+
+    function step(delta) {
+      if (group.length < 2) return;
+      index = (index + delta + group.length) % group.length;
+      render();
+    }
+
+    function open(shots, name, start, trigger) {
+      group = shots;
+      title = name;
+      index = start;
+      lastFocus = trigger || null;
+      viewer.hidden = false;
+      viewer.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      render();
+      (group.length > 1 ? vNext : viewer.querySelector(".shot-close")).focus();
+    }
+
+    function close() {
+      viewer.hidden = true;
+      viewer.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      vImg.removeAttribute("src");
+      if (lastFocus) lastFocus.focus();
+      lastFocus = null;
+    }
+
+    vPrev.addEventListener("click", function () { step(-1); });
+    vNext.addEventListener("click", function () { step(1); });
+
+    // The X and the backdrop both carry data-shot-close.
+    Array.prototype.forEach.call(
+      viewer.querySelectorAll("[data-shot-close]"),
+      function (el) { el.addEventListener("click", close); }
+    );
+
+    document.addEventListener("keydown", function (e) {
+      if (viewer.hidden) return;
+      if (e.key === "Escape") { e.preventDefault(); close(); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); step(-1); }
+      else if (e.key === "ArrowRight") { e.preventDefault(); step(1); }
+    });
+
+    Array.prototype.forEach.call(works, function (work) {
+      var slug = work.getAttribute("data-shots");
+      var body = work.querySelector(".work-body");
+      if (!slug || !body) return;
+
+      collectShots(slug).then(function (shots) {
+        if (!shots.length) return; // row is left untouched
+
+        var name = (work.querySelector(".work-title") || {}).textContent || slug;
+        var list = document.createElement("ul");
+        list.className = "work-shots";
+
+        shots.forEach(function (url, i) {
+          var li = document.createElement("li");
+          var btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "work-shot";
+          btn.setAttribute("aria-label", "Open " + name + " screenshot " + (i + 1));
+
+          var img = document.createElement("img");
+          img.src = url;
+          img.alt = "";
+          img.loading = "lazy";
+          img.decoding = "async";
+
+          btn.appendChild(img);
+          btn.addEventListener("click", function () { open(shots, name, i, btn); });
+          li.appendChild(btn);
+          list.appendChild(li);
+        });
+
+        body.appendChild(list);
+      });
+    });
+  }
+
   /* ---------- Reveal content as it enters the viewport ---------- */
 
   var targets = document.querySelectorAll(
