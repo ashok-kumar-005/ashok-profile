@@ -285,6 +285,17 @@
   }, { passive: true });
   markActive();
 
+  /* ---------- Work screenshots: hide slots with no image yet ----------
+     Each solution links to an assets/work-*.png that may not exist yet;
+     rather than show a broken-image icon, drop the thumbnail entirely so
+     the row reads as text-only until the real screenshot is added.      */
+
+  Array.prototype.forEach.call(document.querySelectorAll(".work-shot img"), function (img) {
+    img.addEventListener("error", function () {
+      img.closest(".work-shot").classList.add("is-empty");
+    });
+  });
+
   /* ---------- Reveal content as it enters the viewport ---------- */
 
   var targets = document.querySelectorAll(
