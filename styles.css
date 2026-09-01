@@ -981,16 +981,28 @@ a:focus-visible {
    solution with none keeps exactly the layout it had before.              */
 .work-shots {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.6rem;
   list-style: none;
   margin: 1.25rem 0 0;
-  padding: 0;
+  padding: 0 0 0.6rem;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-dark) transparent;
 }
+
+.work-shots::-webkit-scrollbar { height: 6px; }
+.work-shots::-webkit-scrollbar-track { background: transparent; }
+.work-shots::-webkit-scrollbar-thumb {
+  background: var(--line-dark);
+  border-radius: 3px;
+}
+.work-shots::-webkit-scrollbar-thumb:hover { background: var(--ink-3); }
 
 .work-shot {
   position: relative;
   display: block;
+  flex: 0 0 auto;
   width: 132px;
   aspect-ratio: 16 / 10;
   overflow: hidden;
@@ -1034,7 +1046,7 @@ a:focus-visible {
 .work-shot:focus-visible::after { opacity: 1; }
 
 @media (max-width: 560px) {
-  .work-shot { width: calc(50% - 0.3rem); }
+  .work-shot { width: 108px; }
 }
 
 /* ---- Viewer ---- */
