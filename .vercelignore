@@ -1,0 +1,6 @@
+# Repo-internal docs and local-only scripts — kept in git for reference and
+# for sharing as Claude context, but not meant to be served on the live site.
+PROJECT.md
+PROFILE.md
+VERSIONS.md
+scripts/
