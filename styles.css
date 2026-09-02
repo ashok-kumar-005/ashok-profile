@@ -890,6 +890,11 @@ a:focus-visible {
 
 .work:last-child { border-bottom: 1px solid var(--line-dark); }
 
+/* Grid items default to min-width: auto, which lets .work-shots' intrinsic
+   (unwrapped) content width force this column — and the whole page — wider
+   than the viewport instead of scrolling internally as .work-shots intends. */
+.work-body { min-width: 0; }
+
 @media (min-width: 760px) {
   .work {
     grid-template-columns: 120px 1fr;
