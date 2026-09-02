@@ -22,7 +22,10 @@ Live structure follows the "v3 — Editorial" design documented in
   Baskerville, IBM Plex Mono).
 - **Hosting:** Vercel (project linked via `.vercel/project.json`). Static
   site — push to `main` and Vercel deploys automatically.
-- **No server, no database, no API routes.** Everything is client-side.
+- **Mostly client-side**, with one exception: `api/track.js`, a single
+  zero-dependency Vercel serverless function used for page-view logging (see
+  "Page view tracking" below). No database beyond Supabase, no framework, no
+  build step for either the site or the function.
 
 ## File map
 
@@ -43,6 +46,10 @@ app.js             All behavior, IIFE-wrapped, organized by feature with
                    viewer, and scroll-reveal animations. No dependencies.
 assets/            Certification images (flat, referenced by filename from
                    index.html) plus assets/shots/ for solution screenshots.
+api/track.js       Vercel serverless function that logs a page_views row in
+                   Supabase per homepage load. See "Page view tracking" below.
+scripts/           Local-only Node scripts, not deployed. Currently just
+                   view-count.js, the page-view check script.
 assets/shots/      Screenshots for the Solutions section (see below).
 VERSIONS.md        History of past full-redesigns, kept as annotated git tags.
 PROFILE.md         Ashok's bio/experience/certs, for sharing as Claude.ai
@@ -93,6 +100,45 @@ Add a `<li class="cert">` to the relevant `<ul class="cert-grid">` group
 `<h3 class="cert-group">` for a new category), with the cert image dropped
 flat into `assets/`. Update the "18 certifications" stat in About and
 `PROFILE.md` to match.
+
+### Page view tracking
+
+A minimal, raw-event page-view log — not a running counter, so it can be
+broken down by day/week/month later if wanted. Not displayed anywhere on the
+site; checked only via a local script.
+
+- **`app.js`** (bottom of the file, its own top-level IIFE): on every
+  homepage load, fires a fire-and-forget `POST /api/track` — no client-side
+  Supabase keys, no UI, silently ignores failures. Skipped entirely when
+  `location.hostname` is `localhost` or `127.0.0.1`, so local dev never logs
+  a view.
+- **`api/track.js`**: a zero-dependency Vercel serverless function. Reads the
+  real visitor IP (`x-forwarded-for`) and country (`x-vercel-ip-country`,
+  injected by Vercel's edge — not looked up via a third-party service) and
+  inserts a row into Supabase's `page_views` table via a plain `fetch` to
+  its REST API. This only runs under Vercel (a deploy, or `vercel dev`) —
+  it does not exist when the site is served with something like
+  `python3 -m http.server`.
+- **Supabase table `page_views`**: `id`, `viewed_at` (default `now()`),
+  `ip`, `country`. Row Level Security allows `insert` from the `anon` role
+  only — no `select`, so reads require the service role key.
+- **Vercel environment variables** (project settings, not committed):
+  `SUPABASE_URL` and `SUPABASE_ANON_KEY`, used by `api/track.js`. Separate
+  from the local-only `.env` below.
+- **`scripts/view-count.js`**: local-only, zero-dependency Node script
+  (Node 18+ native `fetch`, no `package.json`). Run with
+  `node scripts/view-count.js` to print total views plus last-24h/7d/30d
+  breakdowns. Reads `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` from a
+  gitignored `.env` in the repo root (`.gitignore` already covers `.env*`):
+  ```
+  SUPABASE_URL=https://YOUR-PROJECT.supabase.co
+  SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+  ```
+- **No dedup applied** — every non-localhost homepage load logs its own row.
+  Easy options if that's ever wanted: a `sessionStorage` flag (cap at one
+  insert per tab session) or a `localStorage` date-stamp (cap at one per
+  calendar day per browser), added as a short-circuit before the `fetch` in
+  `app.js` — no schema change needed either way.
 
 ### Motion & accessibility
 

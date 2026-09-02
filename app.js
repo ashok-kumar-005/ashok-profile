@@ -473,3 +473,17 @@
     });
   }, { passive: true });
 })();
+
+/* ---------- Page view tracking ----------
+   Fire-and-forget POST to our own /api/track function on every homepage
+   load. That function (not this script) talks to Supabase, since it needs
+   Vercel's edge-injected IP/country headers, which the browser can't see.
+   Skipped entirely in local dev, and never surfaces an error if it fails
+   (offline, ad-blocker, etc.) — this is a separate top-level IIFE so it
+   still runs even when the block above returns early for reduced motion. */
+(function () {
+  var host = window.location.hostname;
+  if (host === "localhost" || host === "127.0.0.1") return;
+
+  fetch("/api/track", { method: "POST", keepalive: true }).catch(function () {});
+})();
