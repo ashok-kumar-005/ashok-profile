@@ -22,7 +22,7 @@ Live structure follows the "v3 — Editorial" design documented in
   Baskerville, IBM Plex Mono).
 - **Hosting:** Vercel (project linked via `.vercel/project.json`). Static
   site — push to `main` and Vercel deploys automatically.
-- **Mostly client-side**, with one exception: `api/track.js`, a single
+- **Mostly client-side**, with one exception: `api/pixel.js`, a single
   zero-dependency Vercel serverless function used for page-view logging (see
   "Page view tracking" below). No database beyond Supabase, no framework, no
   build step for either the site or the function.
@@ -46,8 +46,9 @@ app.js             All behavior, IIFE-wrapped, organized by feature with
                    viewer, and scroll-reveal animations. No dependencies.
 assets/            Certification images (flat, referenced by filename from
                    index.html) plus assets/shots/ for solution screenshots.
-api/track.js       Vercel serverless function that logs a page_views row in
-                   Supabase per homepage load. See "Page view tracking" below.
+api/pixel.js       Vercel serverless function that logs a page_views row in
+                   Supabase per homepage load, disguised as a 1x1 GIF
+                   response. See "Page view tracking" below.
 scripts/           Local-only Node scripts, not deployed. Currently just
                    view-count.js, the page-view check script.
 assets/shots/      Screenshots for the Solutions section (see below).
@@ -108,22 +109,29 @@ broken down by day/week/month later if wanted. Not displayed anywhere on the
 site; checked only via a local script.
 
 - **`app.js`** (bottom of the file, its own top-level IIFE): on every
-  homepage load, fires a fire-and-forget `POST /api/track` — no client-side
-  Supabase keys, no UI, silently ignores failures. Skipped entirely when
+  homepage load, loads `/api/pixel` as a plain `<img>` — a classic
+  tracking-pixel beacon, chosen deliberately so the request shows up under
+  DevTools' "Img" filter next to real screenshots rather than standing out
+  under "Fetch/XHR" as an obvious tracking call. No client-side Supabase
+  keys, no UI, the image is never appended to the DOM. Skipped entirely when
   `location.hostname` is `localhost` or `127.0.0.1`, so local dev never logs
-  a view.
-- **`api/track.js`**: a zero-dependency Vercel serverless function. Reads the
+  a view. Nothing about this is truly invisible to someone actively
+  inspecting requests — that's not achievable for any client-triggered
+  call — it's just deliberately unremarkable at a glance.
+- **`api/pixel.js`**: a zero-dependency Vercel serverless function. Reads the
   real visitor IP (`x-forwarded-for`) and country (`x-vercel-ip-country`,
-  injected by Vercel's edge — not looked up via a third-party service) and
+  injected by Vercel's edge — not looked up via a third-party service),
   inserts a row into Supabase's `page_views` table via a plain `fetch` to
-  its REST API. This only runs under Vercel (a deploy, or `vercel dev`) —
-  it does not exist when the site is served with something like
-  `python3 -m http.server`.
+  its REST API, then responds with a 1x1 transparent GIF
+  (`Content-Type: image/gif`, `Cache-Control: no-store` so it isn't served
+  from cache on repeat visits instead of hitting the function). This only
+  runs under Vercel (a deploy, or `vercel dev`) — it does not exist when the
+  site is served with something like `python3 -m http.server`.
 - **Supabase table `page_views`**: `id`, `viewed_at` (default `now()`),
   `ip`, `country`. Row Level Security allows `insert` from the `anon` role
   only — no `select`, so reads require the service role key.
 - **Vercel environment variables** (project settings, not committed):
-  `SUPABASE_URL` and `SUPABASE_ANON_KEY`, used by `api/track.js`. Separate
+  `SUPABASE_URL` and `SUPABASE_ANON_KEY`, used by `api/pixel.js`. Separate
   from the local-only `.env` below.
 - **`scripts/view-count.js`**: local-only, zero-dependency Node script
   (Node 18+ native `fetch`, no `package.json`). Run with
